@@ -62,5 +62,21 @@
     "quote": "PyTorch 用的是自动微分（第14章）和符号微分的混合体",
     "target_chapter": "第14章",
     "status": "待验证"
+  },
+  {
+    "ref_id": "REF-012",
+    "source": "Ch3",
+    "section": "3.4",
+    "quote": "(batch,seq_len,d_model) appears in Ch29",
+    "target": "Ch29",
+    "status": "pending"
+  },
+  {
+    "ref_id": "REF-013",
+    "source": "Ch3",
+    "section": "3.5",
+    "quote": "softmax(dim=-1) in Ch22/Ch29",
+    "target": "Ch22",
+    "status": "pending"
   }
 ]
