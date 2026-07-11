@@ -843,5 +843,15 @@
         "第21章(LayerNorm)"
       ]
     }
+  ],
+  "24": [
+    {
+      "concept": "优化算法(SGD->Momentum->Adam->AdamW)",
+      "definition": "SGD:纯梯度; Momentum:惯性beta=0.9; Adam:自适应学习率(一阶+二阶矩); AdamW:解耦Weight Decay; Warmup+Cosine调度; Gradient Accumulation",
+      "used_in": [
+        "第31章(训练循环)",
+        "第34章(GPT-2微调)"
+      ]
+    }
   ]
 }
