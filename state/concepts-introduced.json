@@ -921,5 +921,15 @@
         "第35章(Agent工具调用)"
       ]
     }
+  ],
+  "32": [
+    {
+      "concept": "KV Cache",
+      "definition": "Prefill:一次全量计算K/V入缓存; Decode:只算新token的Q,复用历史K/V; O(N^2)->O(N); 内存带宽瓶颈; PagedAttention分页管理",
+      "used_in": [
+        "第33章(解码策略)",
+        "vLLM/TensorRT-LLM"
+      ]
+    }
   ]
 }
