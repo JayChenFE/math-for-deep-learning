@@ -843,25 +843,5 @@
         "第21章(LayerNorm)"
       ]
     }
-  ],
-  "24": [
-    {
-      "concept": "优化算法(SGD->Momentum->Adam->AdamW)",
-      "definition": "SGD:纯梯度; Momentum:惯性; Adam:自适应学习率(一阶+二阶矩); AdamW:解耦Weight Decay; Warmup+Cosine调度",
-      "used_in": [
-        "第31章(训练循环)",
-        "第30章(Transformer训练)"
-      ]
-    }
-  ],
-  "25": [
-    {
-      "concept": "权重初始化(Xavier/Kaiming)",
-      "definition": "Xavier:保持方差一致(tanh/sigmoid); Kaiming:std=sqrt(2/fan_in)补偿ReLU方差减半; 全零->对称性陷阱",
-      "used_in": [
-        "第28章(两层网络)",
-        "第30章(Transformer)"
-      ]
-    }
   ]
 }
