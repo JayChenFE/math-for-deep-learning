@@ -342,5 +342,13 @@
     "quote": "第6.6节从矩阵乘法视角分析连续批处理",
     "target_chapter": "第6章",
     "status": "待验证"
+  },
+  {
+    "ref_id": "REF-044",
+    "source_chapter": "第5章",
+    "source_section": "5.5",
+    "quote": "第4.5节的状态迁移+本节的点积检索+LLM的生成=一个完整的Agent认知循环",
+    "target_chapter": "第4章",
+    "status": "待验证"
   }
 ]

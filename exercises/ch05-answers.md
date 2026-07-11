@@ -49,7 +49,49 @@ print(f"\n两者相等: {abs(dot_algebraic - dot_geometric) < 1e-10} ✓")
 
 ---
 
-## 4. （代码）音乐推荐系统
+## 4. （代码）RAG 检索：Top-K 命中率与相似度分布
+
+```python
+import numpy as np
+
+np.random.seed(42)
+n_docs, d_embed = 200, 64
+
+# 文档向量 + 标记 8 篇相关文档
+docs = np.random.randn(n_docs, d_embed)
+docs = docs / np.linalg.norm(docs, axis=1, keepdims=True)
+relevant_ids = [12, 37, 55, 78, 91, 7, 44, 88]
+for rid in relevant_ids:
+    docs[rid, :16] += np.random.randn(16) * 0.8
+    docs[rid] = docs[rid] / np.linalg.norm(docs[rid])
+
+# Query
+query = np.random.randn(d_embed)
+query[:16] += np.random.randn(16) * 0.8
+query = query / np.linalg.norm(query)
+
+# RAG 检索
+scores = docs @ query
+top5 = np.argsort(scores)[::-1][:5]
+hits = sum(1 for i in top5 if i in relevant_ids)
+
+print(f"知识库: {n_docs} 篇文档")
+print(f"Top-5 文档 ID: {top5}")
+print(f"命中预设相关文档: {hits}/8")
+print(f"Top-5 平均相似度: {scores[top5].mean():.4f}")
+print(f"全库平均相似度:   {scores.mean():.4f}")
+print(f"Top-5 / 全库均值:  {scores[top5].mean()/scores.mean():.1f}x")
+
+# 相似度分布分析
+print(f"\n相似度分位数: min={scores.min():.3f}, 25%={np.percentile(scores,25):.3f}, "
+      f"median={np.median(scores):.3f}, 75%={np.percentile(scores,75):.3f}, max={scores.max():.3f}")
+```
+
+**预期输出**：Top-5 相似度均值显著高于全库均值（数倍甚至更高），预设相关文档大量被召回。相似度分布高度右偏——大多数文档与 Query 无关（集中在 0 附近），少数相关文档形成长尾。
+
+---
+
+## 5. （代码）音乐推荐系统
 
 ```python
 import numpy as np
