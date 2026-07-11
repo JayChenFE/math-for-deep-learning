@@ -149,3 +149,6 @@
 
 ## 第25章：权重初始化
 - 2026-07-12 | test pass | 9 cells nb | 3 exercises
+
+## 第26章：线性回归
+- 2026-07-12 | test pass | 13 cells nb | 3 exercises
