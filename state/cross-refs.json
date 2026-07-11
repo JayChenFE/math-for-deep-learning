@@ -118,5 +118,21 @@
     "quote": "Closed-form -> Ch26 normal equation",
     "target": "Ch26",
     "status": "pending"
+  },
+  {
+    "ref_id": "REF-020",
+    "source": "Ch8",
+    "section": "8.3",
+    "quote": "PCA covariance eigendecomposition (Ch17)",
+    "target": "Ch17",
+    "status": "pending"
+  },
+  {
+    "ref_id": "REF-021",
+    "source": "Ch8",
+    "section": "8.3",
+    "quote": "Eigen -> SVD (Ch9) -> LoRA",
+    "target": "Ch9",
+    "status": "pending"
   }
 ]

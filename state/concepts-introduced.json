@@ -289,5 +289,25 @@
         "Ch26"
       ]
     }
+  ],
+  "8.1-8.2": [
+    {
+      "concept": "Eigenvalue & Eigenvector",
+      "definition": "A*v=lambda*v; v direction unchanged, only scaled",
+      "used_in": [
+        "Ch9 SVD",
+        "Ch17 PCA"
+      ]
+    }
+  ],
+  "8.3": [
+    {
+      "concept": "Eigenvalue Decay",
+      "definition": "Large lambda=rich info direction; small lambda=discardable",
+      "used_in": [
+        "Ch9",
+        "Ch17"
+      ]
+    }
   ]
 }
