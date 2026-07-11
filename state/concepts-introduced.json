@@ -881,5 +881,15 @@
         "第28章(两层网络)"
       ]
     }
+  ],
+  "28": [
+    {
+      "concept": "两层神经网络(NumPy手写反向传播)",
+      "definition": "纯NumPy实现前向/反向/训练循环; ReLU反向:grad[z<=0]=0; d_logits=probs-y_onehot(交叉熵+softmax联合梯度); 与PyTorch autograd梯度检验误差<1e-6",
+      "used_in": [
+        "第31章(训练循环)",
+        "第34章(LoRA微调)"
+      ]
+    }
   ]
 }

@@ -155,3 +155,6 @@
 
 ## 第27章：逻辑回归
 - 2026-07-12 | test pass | nb cells | 3 exercises
+
+## 第28章：两层神经网络
+- 2026-07-12 | test pass(acc=99%) | 8 cells nb | 4 exercises | Part 7完成
