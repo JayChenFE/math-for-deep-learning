@@ -152,3 +152,6 @@
 
 ## 第26章：线性回归
 - 2026-07-12 | test pass | 13 cells nb | 3 exercises
+
+## 第27章：逻辑回归
+- 2026-07-12 | test pass | nb cells | 3 exercises
