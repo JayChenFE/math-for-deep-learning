@@ -358,5 +358,13 @@
     "quote": "第5.5节RAG检索+本节的连续批处理+第4.5节状态迁移=Agent服务完整推理栈",
     "target_chapter": "第5章",
     "status": "待验证"
+  },
+  {
+    "ref_id": "REF-046",
+    "source_chapter": "第15章",
+    "source_section": "15.6",
+    "quote": "工具调用低温度(0.1~0.3)保证JSON确定性;创意规划中温度(0.7~0.9)鼓励多样性;反思高温度采样多轨迹",
+    "target_chapter": "第16章",
+    "status": "待验证"
   }
 ]

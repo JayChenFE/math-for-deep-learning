@@ -633,9 +633,10 @@
   "15.6": [
     {
       "concept": "采样策略",
-      "definition": "Greedy=argmax; Temperature=softmax(x/T)控制多样性; Top-k=前k候选; Top-p(核采样)=累积概率>=p的动态候选集,工业标准0.9",
+      "definition": "Greedy=argmax; Temperature=softmax(x/T):T=0.1~0.3工具调用(确定),T=0.7~0.9创意规划(多样),高T反思采样多轨迹; Top-k固定候选; Top-p动态候选(0.9标准)",
       "used_in": [
-        "第30章(GPT-2生成)"
+        "第30章(GPT-2生成)",
+        "第16.4章(贝叶斯决策)"
       ]
     }
   ],
