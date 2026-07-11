@@ -122,3 +122,6 @@
 
 ## 第16章：条件概率与贝叶斯定理
 - 2026-07-11 | test pass | 8 cells nb | 3 exercises
+
+## 第17章：期望、方差与协方差矩阵
+- 2026-07-11 | test pass | 8 cells nb | 4 exercises | PCA 4D->2D 95% variance retained

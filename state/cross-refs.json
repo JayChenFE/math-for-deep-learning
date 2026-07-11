@@ -310,5 +310,21 @@
     "quote": "第27章逻辑回归的sigmoid输出可以看作P(类别=1|输入)的贝叶斯后验估计",
     "target_chapter": "第27章",
     "status": "待验证"
+  },
+  {
+    "ref_id": "REF-040",
+    "source_chapter": "第17章",
+    "source_section": "17.4",
+    "quote": "第9章SVD可以用更稳定的方式实现PCA",
+    "target_chapter": "第9章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-041",
+    "source_chapter": "第17章",
+    "source_section": "17.5",
+    "quote": "第18章中心极限定理揭示为什么样本均值趋向正态分布",
+    "target_chapter": "第18章",
+    "status": "待验证"
   }
 ]
