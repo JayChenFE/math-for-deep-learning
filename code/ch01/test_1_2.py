@@ -1,18 +1,20 @@
-import numpy as np
+"""Validate Chapter 1.2: Python list vs NumPy array memory & speed."""
 import sys
 import time
+
+import numpy as np
 
 print('=== 1.2 列表 vs 数组 ===')
 
 py_list = list(range(1000))
-np_arr  = np.arange(1000, dtype=np.int64)
+np_arr = np.arange(1000, dtype=np.int64)
 
 print(f"Python 列表: {sys.getsizeof(py_list)} bytes")
 print(f"NumPy 数组: {np_arr.nbytes} bytes")
 
 N = 1_000_000
 big_list = list(range(N))
-big_arr  = np.arange(N, dtype=np.float64)
+big_arr = np.arange(N, dtype=np.float64)
 
 t0 = time.perf_counter()
 squares_list = [x ** 2 for x in big_list]
