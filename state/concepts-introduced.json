@@ -457,5 +457,42 @@
         "HuggingFace PEFT"
       ]
     }
+  ],
+  "10.1-10.4": [
+    {
+      "concept": "数值微分(Numerical Differentiation)",
+      "definition": "f(x)=(f(x+h)-f(x-h))/(2h); 中心差分O(h^2); h最优1e-5~1e-8; 通用但非精确",
+      "used_in": [
+        "第28章(梯度检验)"
+      ]
+    },
+    {
+      "concept": "解析导数速查",
+      "definition": "x^n->nx^(n-1), e^x->e^x, sigmoid->s(1-s), ReLU->0或1, tanh->1-tanh^2",
+      "used_in": [
+        "第13章(链式法则组装)",
+        "第27章(逻辑回归)",
+        "第28章(反向传播)"
+      ]
+    }
+  ],
+  "10.5": [
+    {
+      "concept": "二阶导数(Second Derivative)",
+      "definition": "f\"(x)=(f\")(x); >0凸(最小), <0凹(最大), =0拐点; 数值近似(f(x+h)-2f(x)+f(x-h))/h^2",
+      "used_in": [
+        "第24章(优化器二阶信息)"
+      ]
+    }
+  ],
+  "10.6": [
+    {
+      "concept": "ReLU不可导与subgradient",
+      "definition": "x=0处数学不可导但工程无影响(subgradient选0); 真正问题:ReLU死亡(x<0梯度恒0)",
+      "used_in": [
+        "第25章(Kaiming初始化)",
+        "第28章(反向传播)"
+      ]
+    }
   ]
 }

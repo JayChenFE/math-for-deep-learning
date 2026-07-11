@@ -222,5 +222,21 @@
     "quote": "SVD告诉你矩阵的信息集中在前几个奇异值方向->LoRA利用这一点",
     "target_chapter": "第29章",
     "status": "待验证"
+  },
+  {
+    "ref_id": "REF-029",
+    "source_chapter": "第10章",
+    "source_section": "10.1",
+    "quote": "第28章手写反向传播后用数值微分做梯度检验",
+    "target_chapter": "第28章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-030",
+    "source_chapter": "第10章",
+    "source_section": "10.6",
+    "quote": "第25章Kaiming初始化专门为ReLU设计补偿信息减半",
+    "target_chapter": "第25章",
+    "status": "待验证"
   }
 ]

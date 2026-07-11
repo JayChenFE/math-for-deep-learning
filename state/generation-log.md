@@ -101,3 +101,6 @@
 
 ## 第9章：SVD（奇异值分解）
 - 2026-07-11 | 1个测试通过 | 10 cells notebook | 图像压缩+LoRA
+
+## 第10章：导数
+- 2026-07-11 | test pass | 10 cells nb | 5 exercises validated
