@@ -338,5 +338,130 @@
         "LLM practice"
       ]
     }
+  ],
+  "15.1": [
+    {
+      "concept": "随机变量 (Random Variable)",
+      "definition": "取值由概率决定的变量，分为离散和连续两类，是概率论建模不确定性的基本工具",
+      "used_in": [
+        "第16章(条件概率)",
+        "第17章(期望与方差)",
+        "第19章(信息论)",
+        "第29章(注意力分布)"
+      ]
+    },
+    {
+      "concept": "离散随机变量 (Discrete Random Variable)",
+      "definition": "取值有限或可数的随机变量，用概率质量函数 PMF 描述，满足 ΣP(X=x)=1",
+      "used_in": [
+        "第16章(条件概率)",
+        "第19章(熵与交叉熵)",
+        "第29章(softmax 输出)"
+      ]
+    },
+    {
+      "concept": "概率质量函数 (Probability Mass Function, PMF)",
+      "definition": "对离散随机变量每个取值直接给出概率值 P(X=x)，所有概率之和为 1",
+      "used_in": [
+        "第22章(softmax 输出即 PMF)",
+        "第29章(注意力权重)"
+      ]
+    }
+  ],
+  "15.2": [
+    {
+      "concept": "连续随机变量 (Continuous Random Variable)",
+      "definition": "取值于连续区间的随机变量，用概率密度函数 PDF 描述，概率 = 曲线下面积，单点概率恒为 0",
+      "used_in": [
+        "第17章(协方差)",
+        "第18章(CLT)"
+      ]
+    },
+    {
+      "concept": "概率密度函数 (Probability Density Function, PDF)",
+      "definition": "f(x)≥0 且 ∫f(x)dx=1，P(a≤X≤b)=∫ᵇₐ f(x)dx，曲线下面积代表概率",
+      "used_in": [
+        "第17章(多元正态分布)"
+      ]
+    },
+    {
+      "concept": "正态分布 (Normal / Gaussian Distribution)",
+      "definition": "N(μ,σ²)：钟形曲线，μ 定中心、σ 定宽度；68-95-99.7 规则描述数据集中程度",
+      "used_in": [
+        "第17章(协方差矩阵)",
+        "第18章(CLT 收敛目标)",
+        "第21章(BatchNorm 假设)",
+        "第25章(权重初始化)"
+      ]
+    },
+    {
+      "concept": "68-95-99.7 规则",
+      "definition": "正态分布中约 68%/95%/99.7% 的数据落在 μ±1σ/2σ/3σ 内，是异常检测 3-sigma 原则的理论基础",
+      "used_in": [
+        "第21章(归一化效果评估)"
+      ]
+    }
+  ],
+  "15.3": [
+    {
+      "concept": "均匀分布 (Uniform Distribution)",
+      "definition": "在 [a,b] 上 PDF 为常数 1/(b-a)，最公平的连续分布；AI 中用于权重初始化",
+      "used_in": [
+        "第25章(Xavier/Kaiming 初始化)"
+      ]
+    }
+  ],
+  "15.4": [
+    {
+      "concept": "伯努利分布 (Bernoulli Distribution)",
+      "definition": "P(X=1)=p, P(X=0)=1−p，二选一的离散分布，n 次独立试验之和为二项分布 Binomial(n,p)",
+      "used_in": [
+        "第16章(条件概率示例)",
+        "第19章(二分类交叉熵)",
+        "第25章(Dropout 原理)"
+      ]
+    }
+  ],
+  "15.5": [
+    {
+      "concept": "极大似然估计 (Maximum Likelihood Estimation, MLE)",
+      "definition": "选择使观测数据出现概率最大的参数 θ̂=argmax P(data|θ)；正态分布 MLE 为样本均值和样本方差",
+      "used_in": [
+        "第19章(MLE⇔最小化交叉熵)",
+        "第26章(线性回归 MSE 的 MLE 解释)",
+        "第27章(逻辑回归的 MLE 推导)",
+        "第30章(训练=做 MLE)"
+      ]
+    }
+  ],
+  "15.6": [
+    {
+      "concept": "Greedy 采样",
+      "definition": "始终选概率最高的 token = argmax(p)，导致文本循环重复",
+      "used_in": [
+        "第30章(文本生成对比)"
+      ]
+    },
+    {
+      "concept": "Temperature 采样",
+      "definition": "softmax(x/T)：T→0 退化为 greedy，T→∞ 趋近均匀分布；T<1 更保守/T>1 更多样",
+      "used_in": [
+        "第30章(生成策略调参)"
+      ]
+    },
+    {
+      "concept": "Top-k 采样",
+      "definition": "只从概率前 k 高的 token 中重归一化后采样，k 固定（如 50）",
+      "used_in": [
+        "第30章(采样策略对比)"
+      ]
+    },
+    {
+      "concept": "Top-p / 核采样 (Nucleus Sampling)",
+      "definition": "从累积概率 ≥ p 的最小 token 集合中采样，候选集大小动态调整，p=0.9 为工业标准",
+      "used_in": [
+        "第30章(GPT-2/LLaMA 默认采样策略)"
+      ]
+    }
   ]
 }
