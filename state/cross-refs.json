@@ -94,5 +94,21 @@
     "quote": "Q@K.T = attention (Ch29)",
     "target": "Ch29",
     "status": "pending"
+  },
+  {
+    "ref_id": "REF-017",
+    "source": "Ch6",
+    "section": "6.3",
+    "quote": "Multi-layer = repeated space warping (Ch28)",
+    "target": "Ch28",
+    "status": "pending"
+  },
+  {
+    "ref_id": "REF-018",
+    "source": "Ch6",
+    "section": "6.5",
+    "quote": "Transformer mask broadcasting (Ch29)",
+    "target": "Ch29",
+    "status": "pending"
   }
 ]

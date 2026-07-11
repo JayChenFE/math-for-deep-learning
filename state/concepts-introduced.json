@@ -232,5 +232,44 @@
         "Ch29"
       ]
     }
+  ],
+  "6.1-6.2": [
+    {
+      "concept": "Matrix Multiplication",
+      "definition": "C[i,j]=row_i(A)*col_j(B), core of neural nets",
+      "used_in": [
+        "Ch7",
+        "Ch26-30"
+      ]
+    }
+  ],
+  "6.3": [
+    {
+      "concept": "Linear Transform Geometry",
+      "definition": "Matrix warps space grid",
+      "used_in": [
+        "Ch8",
+        "Ch28"
+      ]
+    }
+  ],
+  "6.4": [
+    {
+      "concept": "Linear Layer",
+      "definition": "output = X@W.T + b, nn.Linear math",
+      "used_in": [
+        "Ch26-30"
+      ]
+    }
+  ],
+  "6.5": [
+    {
+      "concept": "Broadcasting",
+      "definition": "Auto-expand dims from last axis, dim=1 or match",
+      "used_in": [
+        "Ch29",
+        "Ch30"
+      ]
+    }
   ]
 }
