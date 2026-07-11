@@ -523,5 +523,25 @@
         "第24章(优化器)"
       ]
     }
+  ],
+  "12.1-12.2": [
+    {
+      "concept": "梯度向量(Gradient Vector)",
+      "definition": "grad f=[df/dx1,...,df/dxn]; 方向=最陡上升且垂直于等高线; 大小=坡度; grad=0在极值点",
+      "used_in": [
+        "第13章(链式法则)",
+        "第24章(优化器)",
+        "第30章(训练循环)"
+      ]
+    },
+    {
+      "concept": "梯度下降(Gradient Descent)",
+      "definition": "theta=theta-lr*grad; 沿负梯度走小步; lr太小收敛慢,lr太大可能发散; 深度学习训练的原子操作",
+      "used_in": [
+        "第24章(Adam等优化器)",
+        "第26章(线性回归)",
+        "第30章(训练循环)"
+      ]
+    }
   ]
 }

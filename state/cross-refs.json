@@ -246,5 +246,21 @@
     "quote": "第12章将把梯度垂直于等高线翻译成参数更新公式",
     "target_chapter": "第12章",
     "status": "待验证"
+  },
+  {
+    "ref_id": "REF-032",
+    "source_chapter": "第12章",
+    "source_section": "12.4",
+    "quote": "第24章将展示Adam等优化器如何改进梯度下降基础循环",
+    "target_chapter": "第24章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-033",
+    "source_chapter": "第12章",
+    "source_section": "12.4",
+    "quote": "第30章用这个模式训练一个真实的文本续写模型",
+    "target_chapter": "第30章",
+    "status": "待验证"
   }
 ]
