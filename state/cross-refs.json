@@ -198,5 +198,29 @@
     "quote": "第29章Transformer的attention mask广播",
     "target_chapter": "第29章",
     "status": "待验证"
+  },
+  {
+    "ref_id": "REF-026",
+    "source_chapter": "第7章",
+    "source_section": "7.5",
+    "quote": "第26章将对线性和梯度下降两种解法做全面对比",
+    "target_chapter": "第26章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-027",
+    "source_chapter": "第8章",
+    "source_section": "8.3",
+    "quote": "第17章的协方差矩阵特征分解->PCA降维",
+    "target_chapter": "第17章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-028",
+    "source_chapter": "第9章",
+    "source_section": "9.5",
+    "quote": "SVD告诉你矩阵的信息集中在前几个奇异值方向->LoRA利用这一点",
+    "target_chapter": "第29章",
+    "status": "待验证"
   }
 ]

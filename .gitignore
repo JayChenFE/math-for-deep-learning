@@ -48,3 +48,5 @@ environment.yml
 # Test outputs
 *.egg-info
 .pytest_cache/
+
+.obsidian

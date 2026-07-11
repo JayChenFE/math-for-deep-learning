@@ -388,5 +388,74 @@
         "第29章(attention mask)"
       ]
     }
+  ],
+  "7.1-7.4": [
+    {
+      "concept": "逆矩阵(Inverse Matrix)",
+      "definition": "A^-1使得AA^-1=I,撤销A的变换; 方阵且det!=0才可逆; pinv给出最小二乘近似",
+      "used_in": [
+        "第24章(Adam对角缩放)",
+        "第26章(闭式解)"
+      ]
+    }
+  ],
+  "7.5": [
+    {
+      "concept": "正规方程(Normal Equation)",
+      "definition": "w=(X^T X)^-1 X^T y; 线性回归闭式解,一行NumPy直接算出最优权重",
+      "used_in": [
+        "第26章(闭式解vs梯度下降对比)"
+      ]
+    }
+  ],
+  "8.1-8.2": [
+    {
+      "concept": "特征值与特征向量(Eigenvalue/Eigenvector)",
+      "definition": "Av=lambda*v; v方向不变只被拉伸lambda倍; lambda=0则该方向被压缩; det(A)=所有lambda的乘积",
+      "used_in": [
+        "第17章(PCA)",
+        "第9章(SVD)"
+      ]
+    }
+  ],
+  "8.3": [
+    {
+      "concept": "特征值能量占比",
+      "definition": "特征值降序排列,前k个占总能量绝大部分; 丢弃小特征值=降维/压缩的数学基础",
+      "used_in": [
+        "第17章(PCA降维)",
+        "第9章(SVD压缩)"
+      ]
+    }
+  ],
+  "9.1-9.2": [
+    {
+      "concept": "SVD(奇异值分解)",
+      "definition": "A=U*Sigma*V^T,任意矩阵通用分解; 奇异值降序排列,前几个占90%+能量",
+      "used_in": [
+        "第9.3章(图像压缩)",
+        "第9.4章(推荐系统)",
+        "第9.5章(LoRA)"
+      ]
+    }
+  ],
+  "9.3": [
+    {
+      "concept": "低秩近似(Low-Rank Approximation)",
+      "definition": "只保留前k个奇异值重构,存储从O(mn)降到O(k(m+n)); k越小压缩越多",
+      "used_in": [
+        "第9.5章(LoRA)"
+      ]
+    }
+  ],
+  "9.5": [
+    {
+      "concept": "LoRA(Low-Rank Adaptation)",
+      "definition": "DeltaW=B@A, B(dxr)和A(rxd), r<<d; 用2dr参数替代d^2; SVD低秩直觉的工程落地",
+      "used_in": [
+        "LLM微调实践",
+        "HuggingFace PEFT"
+      ]
+    }
   ]
 }
