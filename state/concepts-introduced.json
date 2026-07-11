@@ -213,5 +213,24 @@
         "Ch29"
       ]
     }
+  ],
+  "5.1-5.2": [
+    {
+      "concept": "Dot Product & Cosine Similarity",
+      "definition": "a*b=sum(a_i*b_i)=|a||b|cos(theta)",
+      "used_in": [
+        "Ch6",
+        "Ch29"
+      ]
+    }
+  ],
+  "5.3-5.4": [
+    {
+      "concept": "Batch Q@K^T",
+      "definition": "All query-key similarity scores at once",
+      "used_in": [
+        "Ch29"
+      ]
+    }
   ]
 }
