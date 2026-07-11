@@ -24,6 +24,8 @@ Read `chapters/chNN-*.md` to get the full chapter content.
 
 ## Phase 1: Parse into Cells
 
+> ⚠️ **绝对禁止合并小节**：每个 `### N.M` 标题必须是独立的 markdown cell。不允许将多个小节合并为一个 cell（如 "24.3-24.4 Adam+AdamW"）。
+
 Split the markdown into alternating markdown cells and code cells:
 
 - **Markdown cell**: All prose between code blocks, including:

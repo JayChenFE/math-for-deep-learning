@@ -68,6 +68,7 @@ Write `chapters/chNN-标题.md` following the **章节结构模板** (§三):
 | -------------------- | --------------------------------------------------------------------------- |
 | **直觉先于公式**     | Every concept: intuitive explanation → formal definition → runnable code    |
 | **每节一个核心概念** | Never pack multiple concepts in one section                                 |
+| **小节编号严格对齐目录** | Each `N.M` in the TOC MUST be a separate `### N.M` section in the markdown. **绝对禁止合并小节**——如将 24.3+24.4 合并为 "24.3-24.4"、将 24.6+24.7 合并为 "24.6-24.7"。每个小节独立成节，有独立的标题、正文、关键洞察和 AI 连接 |
 | **首次术语标注英文** | `📐 **定义 术语（English）**：一句话定义`                                   |
 | **代码自包含**       | Every code block has complete `import` — copy-paste runnable                |
 | **形状注释**         | `# X: (batch, d_in)`, `# shape: (32, 784)` after shape-sensitive ops        |
