@@ -13,6 +13,7 @@ arg-schema:
 # Generate Chapter(s) — 《深度学习的数学工程》
 
 Generate chapters following the strict SOP defined in `CLAUDE.md` §十. Each chapter produces **5 artifacts**:
+
 1. `chapters/chNN-*.md` — Illustrated Markdown chapter
 2. `notebooks/chapter_NN.ipynb` — Runnable Jupyter Notebook
 3. `exercises/chNN-answers.md` — Full exercise solutions (code verified)
@@ -45,9 +46,11 @@ Write `chapters/chNN-标题.md` following the **章节结构模板** (§三):
 > 前置知识：[chapter numbers]
 
 ### N.1　[Section Title]
+
 [正文 — 直觉先于公式]
 
 ### N.2　[Section Title]
+
 ...
 
 ---
@@ -61,17 +64,17 @@ Write `chapters/chNN-标题.md` following the **章节结构模板** (§三):
 
 ### Writing rules (MUST follow):
 
-| Rule | Check |
-|---|---|
-| **直觉先于公式** | Every concept: intuitive explanation → formal definition → runnable code |
-| **每节一个核心概念** | Never pack multiple concepts in one section |
-| **首次术语标注英文** | `📐 **定义 术语（English）**：一句话定义` |
-| **代码自包含** | Every code block has complete `import` — copy-paste runnable |
-| **形状注释** | `# X: (batch, d_in)`, `# shape: (32, 784)` after shape-sensitive ops |
-| **AI 连接** | `🔗 **AI 连接**：` in every section, linking concept to Transformer/PyTorch |
-| **章末钩子** | Point to a specific chapter that EXISTS in the TOC |
-| **避免证明** | Explain WHAT and HOW, not WHY the derivation works |
-| **字数控制** | ~300-600 chars/section (excl. code), ~2500-4000 total |
+| Rule                 | Check                                                                       |
+| -------------------- | --------------------------------------------------------------------------- |
+| **直觉先于公式**     | Every concept: intuitive explanation → formal definition → runnable code    |
+| **每节一个核心概念** | Never pack multiple concepts in one section                                 |
+| **首次术语标注英文** | `📐 **定义 术语（English）**：一句话定义`                                   |
+| **代码自包含**       | Every code block has complete `import` — copy-paste runnable                |
+| **形状注释**         | `# X: (batch, d_in)`, `# shape: (32, 784)` after shape-sensitive ops        |
+| **AI 连接**          | `🔗 **AI 连接**：` in every section, linking concept to Transformer/PyTorch |
+| **章末钩子**         | Point to a specific chapter that EXISTS in the TOC                          |
+| **避免证明**         | Explain WHAT and HOW, not WHY the derivation works                          |
+| **字数控制**         | ~300-600 chars/section (excl. code), ~2500-4000 total                       |
 
 ### Code block rules:
 
@@ -139,6 +142,7 @@ Write `exercises/chNN-answers.md`:
 ### `state/concepts-introduced.json`
 
 For each section, add entries in format:
+
 ```json
 "N.M": [
   {
@@ -154,6 +158,7 @@ Track which later chapters will use this concept — this is how the dependency 
 ### `state/cross-refs.json`
 
 For every forward reference in the chapter (🔗 AI 连接 or 章末钩子), add:
+
 ```json
 {
   "ref_id": "REF-XXX",
@@ -170,6 +175,7 @@ If this chapter FULFILLS a prior reference (a prior chapter said "→第N章"), 
 ### `state/generation-log.md`
 
 Append a generation record:
+
 ```markdown
 ## 第N章：[Title]
 
