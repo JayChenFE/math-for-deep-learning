@@ -38,5 +38,53 @@
     "quote": "PyTorch 的 torch.Tensor 和 NumPy 的 ndarray 共享同一个设计哲学——连续内存、同类型、向量化运算",
     "target_chapter": "第6章",
     "status": "待验证"
+  },
+  {
+    "ref_id": "REF-006",
+    "source_chapter": "第2章",
+    "source_section": "2.2",
+    "quote": "PyTorch 的 autograd 用链式法则（第13章）和计算图（第14章）精确计算梯度，完全避开h选择的死结",
+    "target_chapter": "第13章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-007",
+    "source_chapter": "第2章",
+    "source_section": "2.2",
+    "quote": "PyTorch 的 autograd 用链式法则（第13章）和计算图（第14章）精确计算梯度",
+    "target_chapter": "第14章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-008",
+    "source_chapter": "第2章",
+    "source_section": "2.3",
+    "quote": "第12章用它展示梯度下降沿着损失曲面滑向谷底的轨迹，第24章用它对比SGD/Momentum/Adam三种优化器",
+    "target_chapter": "第12章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-009",
+    "source_chapter": "第2章",
+    "source_section": "2.3",
+    "quote": "第24章用它对比SGD/Momentum/Adam三种优化器在同一函数上的收敛路径",
+    "target_chapter": "第24章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-010",
+    "source_chapter": "第2章",
+    "source_section": "2.4",
+    "quote": "第10章会系统学习各种函数的解析导数",
+    "target_chapter": "第10章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-011",
+    "source_chapter": "第2章",
+    "source_section": "2.2",
+    "quote": "第28章手写反向传播时会回头用数值微分做梯度检验（gradient check）",
+    "target_chapter": "第28章",
+    "status": "待验证"
   }
 ]
