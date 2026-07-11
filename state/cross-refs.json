@@ -294,5 +294,21 @@
     "quote": "第30章GPT-2生成用model.generate(temperature=0.7,top_p=0.9)",
     "target_chapter": "第30章",
     "status": "待验证"
+  },
+  {
+    "ref_id": "REF-038",
+    "source_chapter": "第16章",
+    "source_section": "16.2",
+    "quote": "第19章交叉熵损失的推导中,最大化似然等价于最小化交叉熵",
+    "target_chapter": "第19章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-039",
+    "source_chapter": "第16章",
+    "source_section": "16.3",
+    "quote": "第27章逻辑回归的sigmoid输出可以看作P(类别=1|输入)的贝叶斯后验估计",
+    "target_chapter": "第27章",
+    "status": "待验证"
   }
 ]

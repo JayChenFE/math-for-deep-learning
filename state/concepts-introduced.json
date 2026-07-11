@@ -638,5 +638,31 @@
         "第30章(GPT-2生成)"
       ]
     }
+  ],
+  "16.1-16.3": [
+    {
+      "concept": "条件概率(Conditional Probability)",
+      "definition": "P(A|B)=P(A∩B)/P(B); 新信息缩小样本空间,概率在子空间内重新分配",
+      "used_in": [
+        "第19章(交叉熵)",
+        "第27章(逻辑回归)"
+      ]
+    },
+    {
+      "concept": "贝叶斯定理(Bayes Theorem)",
+      "definition": "P(H|E)=P(E|H)P(H)/P(E); 先验*似然比->后验; 永远考虑基础概率",
+      "used_in": [
+        "第16.3章(朴素贝叶斯)",
+        "第19章(信息论)"
+      ]
+    },
+    {
+      "concept": "朴素贝叶斯分类器(Naive Bayes)",
+      "definition": "假设特征独立:P(words|class)=乘积P(w_i|class); 拉普拉斯平滑处理未见词; 20行代码90%+准确率",
+      "used_in": [
+        "垃圾邮件过滤/情感分析",
+        "第19章(交叉熵推导)"
+      ]
+    }
   ]
 }
