@@ -137,3 +137,6 @@
 
 ## 第21章：归一化
 - 2026-07-12 | test pass | 8 cells nb | 4 exercises
+
+## 第22章：Softmax溢出与Logit Bias
+- 2026-07-12 | test pass | 10 cells nb | 5 exercises

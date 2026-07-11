@@ -821,5 +821,16 @@
         "第31章(训练)"
       ]
     }
+  ],
+  "22": [
+    {
+      "concept": "稳定版Softmax+Log-Sum-Exp+Logit Bias",
+      "definition": "softmax(x-max)永不为NaN; log_softmax通过LSE数值稳定; Logit Bias:非法token logit=-inf->概率=0,强制Agent输出合法格式",
+      "used_in": [
+        "第29章(注意力)",
+        "第33章(解码策略)",
+        "第35章(Agent工具调用)"
+      ]
+    }
   ]
 }
