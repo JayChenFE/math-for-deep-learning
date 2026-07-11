@@ -75,7 +75,7 @@ The book follows a strict concept dependency chain, and every math concept is in
 - Chapter 9 “SVD” → Intuition for LoRA low‑rank fine‑tuning
 - Chapter 13 “Chain Rule” → Chapter 28 “Hand‑written Backpropagation”
 - Chapter 19 “Information Theory” → Chapter 27 “Cross‑Entropy Loss”
-- Chapter 29 “Single‑Head Attention” → Chapter 30 “Multi‑Head Assembly” → Chapter 31 “Training & Inference”
+- Chapter 29 “Single‑Head” → Ch 30 “Multi‑Head” → Ch 31 “Training” → Ch 32 “KV Cache” → Ch 33 “Decoding” → Ch 34 “Fine‑tuning+LoRA” → Ch 35 “Agent Tools”
 
 ### 💻 Three‑Piece Set per Chapter: Text + Notebook + Solutions
 
@@ -93,7 +93,7 @@ Key concepts are animated with `matplotlib.animation` – secant lines convergin
 
 ### 📐 Consistent Notation Throughout
 
-Vectors `**x**`, matrices `**W**`, transpose `**X**ᵀ`, gradient `∇**θ**L` – notation never drifts from Chapter 1 to Chapter 31, so readers never ask “what does this symbol really mean?”
+Vectors `**x**`, matrices `**W**`, transpose `**X**ᵀ`, gradient `∇**θ**L` – notation never drifts from Chapter 1 to Chapter 35, so readers never ask “what does this symbol really mean?”
 
 ### 🧪 State Tracking: Designed for AI‑Assisted Creation
 
@@ -115,7 +115,8 @@ This book is AI‑assisted but human‑curated. The `state/` directory maintains
 | **IV: Probability & Statistics** | 15‑19    | Distributions, Bayes, information theory                           | ✅ Ch 15, 16, 19  |
 | **V: Numerical Methods**         | 20‑25    | Floating point, normalisation, optimisation algorithms             | ✅ Ch 22, 24      |
 | **VI: Neural Networks**          | 26‑28    | Linear regression, logistic regression, hand‑written backprop      | —                 |
-| **VII: Transformer**             | 29‑35    | Single‑head attention → Multi‑head → Training → KV Cache → Decoding → Fine‑tuning → Agent tools | ✅ Ch 31‑35      |
+| **VII: Transformer Core**        | 29‑32    | Attention → Multi‑Head → Training → KV Cache                       | ✅ Ch 31, 32      |
+| **VIII: Agent Engineering**      | 33‑35    | Decoding strategies → Fine‑tuning + LoRA → Tool calling & JSON     | ✅ Ch 33‑35       |
 
 ---
 
