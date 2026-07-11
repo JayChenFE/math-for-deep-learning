@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+.vscode/.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# OS files
+Desktop.ini
+
+# Python type checking
+.mypy_cache/
+.pyre/
+
+# Jupyter
+.jupyter/
+
+# Conda
+environment.yml
+
+# Assets (generated images/GIFs — optional, uncomment to track)
+# assets/*.png
+# assets/*.gif
+
+# Test outputs
+*.egg-info
+.pytest_cache/
