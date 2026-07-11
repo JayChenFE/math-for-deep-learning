@@ -34,3 +34,22 @@
 - **发现的坑**：
   - matplotlib 在当前 Python 环境不可用，测试脚本动画渲染部分条件跳过
   - x³ 的数值微分崩溃点与 x² 相同（都在 h<1e-12）——因为崩溃原因在 float64 精度天花板，与具体函数无关，此洞察已写入习题答案
+
+## 第3章：标量、向量与张量 —— AI的数据容器
+
+- **生成时间**：2026-07-11
+- **模型**：deepseek-v4-pro
+- **写作标准**：§3.1 六要素流水线 + §3.3 自检清单
+- **校验结果**：全部 5 个代码块通过
+  - test_3_1（标量/0D）：✅ shape=(), item()提取Python float, 标量运算
+  - test_3_2（向量/1D）：✅ shape=(n,), 索引切片, L2范数, (n,)vs(n,1)vs(1,n)
+  - test_3_3（矩阵/2D）：✅ shape=(32,784), 行/列索引, 子矩阵切片, Linear层参数
+  - test_3_4（张量/3D+）：✅ 3D批量灰度图, 4D批量RGB, Transformer风格3D张量
+  - test_3_5（轴/Axis）：✅ axis=k消灭第k维, axis=-1=最后一维, mean验证
+- **概念引入**：9 项（标量/.item()、向量/shape逗号、矩阵/batch约定、张量/shape读法、轴/axis直觉）
+- **前瞻引用**：第29章(Transformer张量流)、第22章(softmax dim)、第21章(LayerNorm)、第5章(点积)
+- **Notebook**：✅ `notebooks/chapter_03.ipynb` 已生成（14 cells）
+- **习题答案**：✅ `exercises/ch03-answers.md` 已生成（5题，3概念+2代码，全部验证通过）
+- **发现的坑**：
+  - 轴的直觉是全书最容易卡住的概念之一，专门增加了"axis=k就是消灭第k维"的口诀+矩阵可视化辅助
+  - shape逗号问题（(n,) vs (n,1) vs (1,n)）提前在第3章点出，避免后续矩阵乘法章节发生静默bug

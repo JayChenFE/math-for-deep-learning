@@ -97,5 +97,55 @@
       "definition": "函数在某点导数极限存在则该点可导；深度学习要求损失函数和激活函数几乎处处可导",
       "used_in": ["第14章(计算图要求)", "第28章(反向传播前提)"]
     }
+  ],
+  "3.1": [
+    {
+      "concept": "标量 (Scalar)",
+      "definition": "0维张量，shape=()，只包含一个数值；深度学习中loss函数的值就是标量，是整个训练过程的唯一优化目标",
+      "used_in": ["第10章(导数值)", "第14章(loss.backward()起点)", "第30章(训练循环loss打印)"]
+    },
+    {
+      "concept": ".item() 方法",
+      "definition": "将0维PyTorch/NumPy张量取出为Python float；训练循环中loss.item()是最常见的操作之一",
+      "used_in": ["第30章(训练循环输出)"]
+    }
+  ],
+  "3.2": [
+    {
+      "concept": "向量 (Vector)",
+      "definition": "1维张量，shape=(n,)，n个有序排列的数值；词嵌入、隐藏状态、偏置项本质上都是向量",
+      "used_in": ["第4章(向量加减)", "第5章(点积)", "第12章(梯度向量)", "第29章(Q/K/V向量)"]
+    },
+    {
+      "concept": "shape逗号的重要性",
+      "definition": "(n,)是一维向量，(n,1)是二维列矩阵，(1,n)是二维行矩阵；三者数值可相同但广播和矩阵乘法行为不同",
+      "used_in": ["第6章(广播机制)", "第29章(维度变换)"]
+    }
+  ],
+  "3.3": [
+    {
+      "concept": "矩阵 (Matrix)",
+      "definition": "2维张量，shape=(m,n)；AI中第一维几乎总是batch(样本数)，第二维是特征数；矩阵=批量向量的堆叠",
+      "used_in": ["第6章(矩阵乘法)", "第7章(逆矩阵)", "第9章(SVD)", "第29章(QKV投影)"]
+    }
+  ],
+  "3.4": [
+    {
+      "concept": "张量 (Tensor)",
+      "definition": "3维及以上多维数组；广义上也泛指任意维度数组(含标量/向量/矩阵)；PyTorch核心类型torch.Tensor统一了0~N维",
+      "used_in": ["第29章(Transformer形状变换)", "第30章(训练批量)"]
+    },
+    {
+      "concept": "shape读法——数据物理含义",
+      "definition": "(batch,seq_len,d_model)=批量×序列长×嵌入维；(batch,heads,seq,dk)=批量×头数×序列×每头维度；读shape如读母语是AI工程师基本功",
+      "used_in": ["第29章(注意力张量流)", "第30章(训练数据加载)"]
+    }
+  ],
+  "3.5": [
+    {
+      "concept": "轴 (Axis)",
+      "definition": "张量的第k个维度，索引从0开始；axis=k意味着沿第k维方向操作，该维被消灭；axis=-1永远是最后一维",
+      "used_in": ["第22章(softmax(dim=-1))", "第21章(LayerNorm(dim=-1))", "第29章(attention softmax维度)"]
+    }
   ]
 }
