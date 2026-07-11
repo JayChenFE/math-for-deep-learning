@@ -174,5 +174,29 @@
     "quote": "第22章将修复上面代码中exp(scores)可能溢出的问题（稳定版softmax）",
     "target_chapter": "第22章",
     "status": "待验证"
+  },
+  {
+    "ref_id": "REF-023",
+    "source_chapter": "第6章",
+    "source_section": "6.3",
+    "quote": "第8章特征值揭示扭曲程度，第9章SVD取最重要扭曲方向",
+    "target_chapter": "第8章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-024",
+    "source_chapter": "第6章",
+    "source_section": "6.3",
+    "quote": "第28章两层网络=两次空间变换+ReLU非线性折叠",
+    "target_chapter": "第28章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-025",
+    "source_chapter": "第6章",
+    "source_section": "6.5",
+    "quote": "第29章Transformer的attention mask广播",
+    "target_chapter": "第29章",
+    "status": "待验证"
   }
 ]

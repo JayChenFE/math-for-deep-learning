@@ -3,220 +3,390 @@
     {
       "concept": "IEEE 754 浮点数 (IEEE 754 Floating Point)",
       "definition": "64-bit 二进制近似存储实数（1 符号 + 11 指数 + 52 尾数），约 15-17 位有效数字，导致 0.1+0.2≠0.3",
-      "used_in": ["第20章(混合精度训练)", "第22章(softmax 溢出)"]
+      "used_in": [
+        "第20章(混合精度训练)",
+        "第22章(softmax 溢出)"
+      ]
     },
     {
       "concept": "浮点比较 (Floating-Point Comparison)",
       "definition": "用 math.isclose() 或 |a-b|<EPS 容差法判断相等，禁用 == 直接比较浮点数",
-      "used_in": ["第10章(数值微分验证)", "第22章(softmax 输出和验证)"]
+      "used_in": [
+        "第10章(数值微分验证)",
+        "第22章(softmax 输出和验证)"
+      ]
     },
     {
       "concept": "int 与 bool",
       "definition": "int 是精确整数（Python 无上限），bool 是 int 子类（True=1, False=0），可用于累加计数",
-      "used_in": ["全书基础"]
+      "used_in": [
+        "全书基础"
+      ]
     }
   ],
   "1.2": [
     {
       "concept": "NumPy 数组 (ndarray)",
       "definition": "同类型元素连续内存排列的多维数组，运算在 C 层面向量化执行，比 Python 列表快 20-50 倍",
-      "used_in": ["全书代码基础——每一章都依赖 ndarray 或 torch.Tensor"]
+      "used_in": [
+        "全书代码基础——每一章都依赖 ndarray 或 torch.Tensor"
+      ]
     },
     {
       "concept": "向量化 (Vectorization)",
       "definition": "用数组级运算（arr**2）替代显式 Python 循环（for x in list: x**2），利用 C 层 SIMD 并行加速",
-      "used_in": ["第4章(向量运算)", "第5章(点积)", "第6章(矩阵乘法)"]
+      "used_in": [
+        "第4章(向量运算)",
+        "第5章(点积)",
+        "第6章(矩阵乘法)"
+      ]
     },
     {
       "concept": "连续内存 (Contiguous Memory)",
       "definition": "数组元素在 RAM 中紧密排列，CPU 缓存命中率高，是 NumPy/PyTorch 性能的物理根基",
-      "used_in": ["第6章(矩阵乘法性能)", "第29章(Transformer 张量操作)"]
+      "used_in": [
+        "第6章(矩阵乘法性能)",
+        "第29章(Transformer 张量操作)"
+      ]
     }
   ],
   "1.3": [
     {
       "concept": "函数 (Function)",
       "definition": "输入到输出的映射规则 f: x→f(x)，Python 中用 def 定义；整个神经网络本质是 f(x;θ)",
-      "used_in": ["第10章(导数)", "第14章(计算图)", "第30章(训练循环)"]
+      "used_in": [
+        "第10章(导数)",
+        "第14章(计算图)",
+        "第30章(训练循环)"
+      ]
     },
     {
       "concept": "matplotlib 绘图模板",
       "definition": "plot_function() 可复用模板：np.linspace 采样 → plt.plot 绘图 → 标注轴和图例。全书画图的基础工具",
-      "used_in": ["第2章(割线动画)", "第12章(梯度下降轨迹)", "第22章(softmax 曲线)", "第24章(优化路径)"]
+      "used_in": [
+        "第2章(割线动画)",
+        "第12章(梯度下降轨迹)",
+        "第22章(softmax 曲线)",
+        "第24章(优化路径)"
+      ]
     },
     {
       "concept": "np.linspace",
       "definition": "在指定区间均匀采样 n 个点返回数组，是将连续函数离散化以绘制图像的标配工具",
-      "used_in": ["全书可视化——每章的 plot/绘图代码都用到"]
+      "used_in": [
+        "全书可视化——每章的 plot/绘图代码都用到"
+      ]
     }
   ],
   "2.1": [
     {
       "concept": "割线 (Secant Line)",
       "definition": "穿过曲线上两点的直线，其斜率=(f(b)-f(a))/(b-a)=区间上的平均变化率",
-      "used_in": ["第10章(导数定义)", "第12章(梯度下降步长直觉)"]
+      "used_in": [
+        "第10章(导数定义)",
+        "第12章(梯度下降步长直觉)"
+      ]
     },
     {
       "concept": "平均变化率 (Average Rate of Change)",
       "definition": "函数在区间[a,b]上的总变化量除以区间长度，几何上等于割线斜率；区间越短越接近瞬时变化率",
-      "used_in": ["第10章(与瞬时变化率对比)", "第24章(Mini-Batch梯度估计)"]
+      "used_in": [
+        "第10章(与瞬时变化率对比)",
+        "第24章(Mini-Batch梯度估计)"
+      ]
     }
   ],
   "2.2": [
     {
       "concept": "瞬时变化率 (Instantaneous Rate of Change)",
       "definition": "当h→0时割线斜率的极限值，即导数f'(a)；几何上等于切线斜率",
-      "used_in": ["第10章(导数符号计算)", "第12章(梯度)"]
+      "used_in": [
+        "第10章(导数符号计算)",
+        "第12章(梯度)"
+      ]
     },
     {
       "concept": "数值微分的h选取两难",
       "definition": "h太大→近似误差主导（割线离切线远）；h太小(<1e-12)→浮点舍入误差主导（f(a+h)≈f(a)无法区分）；最优区间1e-5~1e-8",
-      "used_in": ["第10章(梯度检验)", "第28章(手写反向传播验证)"]
+      "used_in": [
+        "第10章(梯度检验)",
+        "第28章(手写反向传播验证)"
+      ]
     },
     {
       "concept": "切线 (Tangent Line)",
       "definition": "割线在h→0时的极限位置，只与曲线在一点相切，其斜率=导数f'(a)",
-      "used_in": ["第10章(导数几何意义)", "第12章(梯度下降方向)"]
+      "used_in": [
+        "第10章(导数几何意义)",
+        "第12章(梯度下降方向)"
+      ]
     }
   ],
   "2.3": [
     {
       "concept": "matplotlib.animation.FuncAnimation",
       "definition": "逐帧动画工具，可将极限过程可视化；init()初始化→animate(frame)逐帧更新→保存为GIF",
-      "used_in": ["第12章(梯度下降轨迹动画)", "第24章(优化器收敛路径动画)"]
+      "used_in": [
+        "第12章(梯度下降轨迹动画)",
+        "第24章(优化器收敛路径动画)"
+      ]
     }
   ],
   "2.4": [
     {
       "concept": "导数 (Derivative)",
       "definition": "f'(a)=lim(h→0)[f(a+h)-f(a)]/h，函数在a点的瞬时变化率，几何上等于切线斜率；若极限存在则称f在a点可导",
-      "used_in": ["第10章(解析导数公式)", "第11章(偏导数)", "第12章(梯度)", "第13章(链式法则)", "第14章(自动微分)"]
+      "used_in": [
+        "第10章(解析导数公式)",
+        "第11章(偏导数)",
+        "第12章(梯度)",
+        "第13章(链式法则)",
+        "第14章(自动微分)"
+      ]
     },
     {
       "concept": "可导 (Differentiable)",
       "definition": "函数在某点导数极限存在则该点可导；深度学习要求损失函数和激活函数几乎处处可导",
-      "used_in": ["第14章(计算图要求)", "第28章(反向传播前提)"]
+      "used_in": [
+        "第14章(计算图要求)",
+        "第28章(反向传播前提)"
+      ]
     }
   ],
   "3.1": [
     {
       "concept": "标量 (Scalar)",
       "definition": "0维张量，shape=()，只包含一个数值；深度学习中loss函数的值就是标量，是整个训练过程的唯一优化目标",
-      "used_in": ["第10章(导数值)", "第14章(loss.backward()起点)", "第30章(训练循环loss打印)"]
+      "used_in": [
+        "第10章(导数值)",
+        "第14章(loss.backward()起点)",
+        "第30章(训练循环loss打印)"
+      ]
     },
     {
       "concept": ".item() 方法",
       "definition": "将0维PyTorch/NumPy张量取出为Python float；训练循环中loss.item()是最常见的操作之一",
-      "used_in": ["第30章(训练循环输出)"]
+      "used_in": [
+        "第30章(训练循环输出)"
+      ]
     }
   ],
   "3.2": [
     {
       "concept": "向量 (Vector)",
       "definition": "1维张量，shape=(n,)，n个有序排列的数值；词嵌入、隐藏状态、偏置项本质上都是向量",
-      "used_in": ["第4章(向量加减)", "第5章(点积)", "第12章(梯度向量)", "第29章(Q/K/V向量)"]
+      "used_in": [
+        "第4章(向量加减)",
+        "第5章(点积)",
+        "第12章(梯度向量)",
+        "第29章(Q/K/V向量)"
+      ]
     },
     {
       "concept": "shape逗号的重要性",
       "definition": "(n,)是一维向量，(n,1)是二维列矩阵，(1,n)是二维行矩阵；三者数值可相同但广播和矩阵乘法行为不同",
-      "used_in": ["第6章(广播机制)", "第29章(维度变换)"]
+      "used_in": [
+        "第6章(广播机制)",
+        "第29章(维度变换)"
+      ]
     }
   ],
   "3.3": [
     {
       "concept": "矩阵 (Matrix)",
       "definition": "2维张量，shape=(m,n)；AI中第一维几乎总是batch(样本数)，第二维是特征数；矩阵=批量向量的堆叠",
-      "used_in": ["第6章(矩阵乘法)", "第7章(逆矩阵)", "第9章(SVD)", "第29章(QKV投影)"]
+      "used_in": [
+        "第6章(矩阵乘法)",
+        "第7章(逆矩阵)",
+        "第9章(SVD)",
+        "第29章(QKV投影)"
+      ]
     }
   ],
   "3.4": [
     {
       "concept": "张量 (Tensor)",
       "definition": "3维及以上多维数组；广义上也泛指任意维度数组(含标量/向量/矩阵)；PyTorch核心类型torch.Tensor统一了0~N维",
-      "used_in": ["第29章(Transformer形状变换)", "第30章(训练批量)"]
+      "used_in": [
+        "第29章(Transformer形状变换)",
+        "第30章(训练批量)"
+      ]
     },
     {
       "concept": "shape读法——数据物理含义",
       "definition": "(batch,seq_len,d_model)=批量×序列长×嵌入维；(batch,heads,seq,dk)=批量×头数×序列×每头维度；读shape如读母语是AI工程师基本功",
-      "used_in": ["第29章(注意力张量流)", "第30章(训练数据加载)"]
+      "used_in": [
+        "第29章(注意力张量流)",
+        "第30章(训练数据加载)"
+      ]
     }
   ],
   "3.5": [
     {
       "concept": "轴 (Axis)",
       "definition": "张量的第k个维度，索引从0开始；axis=k意味着沿第k维方向操作，该维被消灭；axis=-1永远是最后一维",
-      "used_in": ["第22章(softmax(dim=-1))", "第21章(LayerNorm(dim=-1))", "第29章(attention softmax维度)"]
+      "used_in": [
+        "第22章(softmax(dim=-1))",
+        "第21章(LayerNorm(dim=-1))",
+        "第29章(attention softmax维度)"
+      ]
     }
   ],
   "4.1": [
     {
       "concept": "向量加法 (Vector Addition)",
       "definition": "对应位置相加，几何上遵循平行四边形法则——以两向量为邻边画平行四边形，对角线=和",
-      "used_in": ["第5章(点积分量展开)", "第29章(残差连接x+Sublayer(x))"]
+      "used_in": [
+        "第5章(点积分量展开)",
+        "第29章(残差连接x+Sublayer(x))"
+      ]
     },
     {
       "concept": "残差连接直觉 (Residual Connection Intuition)",
       "definition": "output=x+F(x)本质是向量加法——原始信号+修正量，信息可无损跳过变换层",
-      "used_in": ["第29章(Transformer残差)", "第14章(反向传播梯度直达)"]
+      "used_in": [
+        "第29章(Transformer残差)",
+        "第14章(反向传播梯度直达)"
+      ]
     }
   ],
   "4.2": [
     {
       "concept": "向量数乘 (Scalar Multiplication)",
       "definition": "c*v=[c·v1,c·v2,...,c·vn]；c>1拉长，0<c<1缩短，c<0反向；只缩放长度不改变方向",
-      "used_in": ["第12章(lr*∇L参数更新)", "第24章(优化器步长控制)", "第30章(训练循环)"]
+      "used_in": [
+        "第12章(lr*∇L参数更新)",
+        "第24章(优化器步长控制)",
+        "第30章(训练循环)"
+      ]
     },
     {
       "concept": "学习率作为缩放因子",
       "definition": "lr*∇L是数乘操作——梯度决定方向，学习率决定步长；lr太小则收敛慢，lr太大则震荡",
-      "used_in": ["第12章(梯度下降)", "第24章(学习率调度)", "第30章(训练循环)"]
+      "used_in": [
+        "第12章(梯度下降)",
+        "第24章(学习率调度)",
+        "第30章(训练循环)"
+      ]
     }
   ],
   "4.3": [
     {
       "concept": "matplotlib.quiver",
       "definition": "画向量箭头的标配工具：quiver(起点X,起点Y,方向X,方向Y)；scale_units='xy'+scale=1保证真实比例",
-      "used_in": ["第12章(梯度场可视化)", "第17章(PCA方向图)"]
+      "used_in": [
+        "第12章(梯度场可视化)",
+        "第17章(PCA方向图)"
+      ]
     }
   ],
   "4.4": [
     {
       "concept": "词嵌入语义运算 (Word Embedding Arithmetic)",
       "definition": "v(国王)-v(男人)+v(女人)≈v(女王)——向量加减可操作语义属性，高维空间方向编码抽象概念",
-      "used_in": ["第5章(余弦相似度计算)", "第29章(Transformer Q·K语义匹配)"]
+      "used_in": [
+        "第5章(余弦相似度计算)",
+        "第29章(Transformer Q·K语义匹配)"
+      ]
     }
   ],
   "5.1": [
     {
       "concept": "点积 / 内积 (Dot Product / Inner Product)",
       "definition": "a·b = Σaᵢbᵢ，对应位置相乘再求和，结果是一个标量；是衡量两个向量相似度的基本运算",
-      "used_in": ["第6章(矩阵乘法每个元素=点积)", "第29章(Q@K^T注意力得分)"]
+      "used_in": [
+        "第6章(矩阵乘法每个元素=点积)",
+        "第29章(Q@K^T注意力得分)"
+      ]
     }
   ],
   "5.2": [
     {
       "concept": "点积的几何定义",
       "definition": "a·b = |a||b|cosθ；代数定义Σaᵢbᵢ和几何定义|a||b|cosθ给出完全相同的结果——这是线性代数中代数与几何的交汇点",
-      "used_in": ["第29章(高维空间中无法画图，靠点积精确知道夹角)"]
+      "used_in": [
+        "第29章(高维空间中无法画图，靠点积精确知道夹角)"
+      ]
     },
     {
       "concept": "余弦相似度 (Cosine Similarity)",
       "definition": "cos_sim = a·b/(|a||b|) = cosθ，值域[-1,1]；只度量方向一致性，不受向量长度影响",
-      "used_in": ["第5.3章(推荐系统)", "第9章(LoRA低秩分解)", "第29章(注意力权重)"]
+      "used_in": [
+        "第5.3章(推荐系统)",
+        "第9章(LoRA低秩分解)",
+        "第29章(注意力权重)"
+      ]
     }
   ],
   "5.3": [
     {
       "concept": "基于内容的推荐 (Content-Based Recommendation)",
       "definition": "用户向量·物品向量 → 余弦相似度排序 → Top-K推荐；本质是向量空间中的最近邻搜索",
-      "used_in": ["第9章(矩阵分解推荐)", "第29章(注意力=对匹配度加权求和)"]
+      "used_in": [
+        "第9章(矩阵分解推荐)",
+        "第29章(注意力=对匹配度加权求和)"
+      ]
     }
   ],
   "5.4": [
     {
       "concept": "缩放点积注意力 (Scaled Dot-Product Attention)",
       "definition": "Attention(Q,K,V)=softmax(Q@K^T/√d_k)@V；Q@K^T中每个元素是query和key向量的点积；/√d_k防止点积过大导致softmax饱和",
-      "used_in": ["第22章(稳定版softmax)", "第29章(Multi-Head Attention完整实现)", "第30章(GPT-2推理)"]
+      "used_in": [
+        "第22章(稳定版softmax)",
+        "第29章(Multi-Head Attention完整实现)",
+        "第30章(GPT-2推理)"
+      ]
+    }
+  ],
+  "6.1": [
+    {
+      "concept": "矩阵-向量乘法",
+      "definition": "W(mxn)@x(n,)->y(m,); y[i]=W第i行与x的点积; 将n维输入映射到m维输出",
+      "used_in": [
+        "第12章(梯度)",
+        "第28章(两层网络)"
+      ]
+    }
+  ],
+  "6.2": [
+    {
+      "concept": "矩阵乘法",
+      "definition": "A(mxk)@B(kxn)->C(mxn); C[i,j]=A第i行·B第j列; 前提A列数=B行数; @底层调BLAS",
+      "used_in": [
+        "第29章(Q@K^T)",
+        "第30章(训练)"
+      ]
+    }
+  ],
+  "6.3": [
+    {
+      "concept": "线性变换的几何含义",
+      "definition": "矩阵每列=原基向量映射后的新位置; 空间随基向量旋转/拉伸/剪切; 多层网络=多次空间扭曲叠加",
+      "used_in": [
+        "第8章(特征值)",
+        "第9章(SVD)"
+      ]
+    }
+  ],
+  "6.4": [
+    {
+      "concept": "全连接层",
+      "definition": "output=X@W.T+b; W(d_out,d_in); 每个输出神经元用权重向量与输入做点积检测模式",
+      "used_in": [
+        "第28章(两层网络)",
+        "第29章(FFN)"
+      ]
+    }
+  ],
+  "6.5": [
+    {
+      "concept": "广播机制(Broadcasting)",
+      "definition": "从右往左对齐shape，相等或为1兼容，缺失补1; (batch,d)+(d,)是最常见模式",
+      "used_in": [
+        "第21章(LayerNorm)",
+        "第29章(attention mask)"
+      ]
     }
   ]
 }
