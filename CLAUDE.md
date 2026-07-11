@@ -329,7 +329,7 @@ def scaled_dot_product_attention(Q, K, V, mask=None):
 ## 九、文件组织
 
 ```
-c:\projs\math-for-deep-learning\
+math-for-deep-learning\
 ├── CLAUDE.md
 ├── README.md                      ← 项目说明、环境配置、学习路线
 ├── environment.yml                ← (可选) Conda 环境配置文件
