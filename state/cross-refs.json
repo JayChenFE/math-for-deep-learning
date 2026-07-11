@@ -382,5 +382,13 @@
     "quote": "第31章训练GPT-2时per_device_train_batch_size和gradient_accumulation_steps组合利用CLT",
     "target_chapter": "第31章",
     "status": "待验证"
+  },
+  {
+    "ref_id": "REF-050",
+    "source_chapter": "第19章",
+    "source_section": "19.7",
+    "quote": "第16.4节贝叶斯置信度+本节PPL异常检测=Agent安全决策双维度",
+    "target_chapter": "第16章",
+    "status": "待验证"
   }
 ]

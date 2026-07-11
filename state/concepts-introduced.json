@@ -759,5 +759,45 @@
         "第31章(GPT-2训练)"
       ]
     }
+  ],
+  "19.1-19.2": [
+    {
+      "concept": "信息量/熵(Information/Entropy)",
+      "definition": "I(p)=-log2(p):概率越低信息量越大; H(P)=-sum p*log(p):分布的平均不确定度; 均匀分布熵最大",
+      "used_in": [
+        "第19.4节(交叉熵)",
+        "第22章(softmax)"
+      ]
+    }
+  ],
+  "19.3-19.5": [
+    {
+      "concept": "KL散度/交叉熵/MLE等价性",
+      "definition": "D_KL(P||Q)>=0不对称; H(P,Q)=H(P)+D_KL; 分类中one-hot P->CE=KL=-log(q_correct); MLE<=>最小化CE",
+      "used_in": [
+        "第27章(逻辑回归)",
+        "第30章(训练loss)"
+      ]
+    }
+  ],
+  "19.6": [
+    {
+      "concept": "困惑度(Perplexity)",
+      "definition": "PPL=exp(CE); PPL=10=模型从10个等概率词中猜; 不能跨词表比较; 正常文本<20,乱码>1000",
+      "used_in": [
+        "第19.7节(安全护栏)",
+        "第31章(微调评估)"
+      ]
+    }
+  ],
+  "19.7": [
+    {
+      "concept": "Agent PPL安全护栏",
+      "definition": "越狱Prompt含异常token组合->PPL极高; 设阈值拦截; +6.4贝叶斯置信度=Agent安全双维度",
+      "used_in": [
+        "第16.4节(置信度决策)",
+        "附录D(Agent速查)"
+      ]
+    }
   ]
 }

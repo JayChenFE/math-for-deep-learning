@@ -128,3 +128,6 @@
 
 ## 第18章：大数定律与中心极限定理
 - 2026-07-12 | test pass | 10 cells nb | 3 exercises
+
+## 第19章：信息论
+- 2026-07-12 | test pass | 12 cells nb | 5 exercises | 信息论+Agent安全护栏
