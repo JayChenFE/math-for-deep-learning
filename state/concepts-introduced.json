@@ -931,5 +931,15 @@
         "vLLM/TensorRT-LLM"
       ]
     }
+  ],
+  "33": [
+    {
+      "concept": "解码策略",
+      "definition": "Greedy/Temperature/Top-k/Top-p/RepetitionPenalty",
+      "used_in": [
+        "第15章",
+        "第35章"
+      ]
+    }
   ]
 }
