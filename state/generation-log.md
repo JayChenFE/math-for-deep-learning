@@ -131,3 +131,6 @@
 
 ## 第19章：信息论
 - 2026-07-12 | test pass | 12 cells nb | 5 exercises | 信息论+Agent安全护栏
+
+## 第20章：浮点数陷阱与精度
+- 2026-07-12 | test pass | 8 cells nb | 4 exercises
