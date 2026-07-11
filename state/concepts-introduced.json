@@ -147,5 +147,43 @@
       "definition": "张量的第k个维度，索引从0开始；axis=k意味着沿第k维方向操作，该维被消灭；axis=-1永远是最后一维",
       "used_in": ["第22章(softmax(dim=-1))", "第21章(LayerNorm(dim=-1))", "第29章(attention softmax维度)"]
     }
+  ],
+  "4.1": [
+    {
+      "concept": "向量加法 (Vector Addition)",
+      "definition": "对应位置相加，几何上遵循平行四边形法则——以两向量为邻边画平行四边形，对角线=和",
+      "used_in": ["第5章(点积分量展开)", "第29章(残差连接x+Sublayer(x))"]
+    },
+    {
+      "concept": "残差连接直觉 (Residual Connection Intuition)",
+      "definition": "output=x+F(x)本质是向量加法——原始信号+修正量，信息可无损跳过变换层",
+      "used_in": ["第29章(Transformer残差)", "第14章(反向传播梯度直达)"]
+    }
+  ],
+  "4.2": [
+    {
+      "concept": "向量数乘 (Scalar Multiplication)",
+      "definition": "c*v=[c·v1,c·v2,...,c·vn]；c>1拉长，0<c<1缩短，c<0反向；只缩放长度不改变方向",
+      "used_in": ["第12章(lr*∇L参数更新)", "第24章(优化器步长控制)", "第30章(训练循环)"]
+    },
+    {
+      "concept": "学习率作为缩放因子",
+      "definition": "lr*∇L是数乘操作——梯度决定方向，学习率决定步长；lr太小则收敛慢，lr太大则震荡",
+      "used_in": ["第12章(梯度下降)", "第24章(学习率调度)", "第30章(训练循环)"]
+    }
+  ],
+  "4.3": [
+    {
+      "concept": "matplotlib.quiver",
+      "definition": "画向量箭头的标配工具：quiver(起点X,起点Y,方向X,方向Y)；scale_units='xy'+scale=1保证真实比例",
+      "used_in": ["第12章(梯度场可视化)", "第17章(PCA方向图)"]
+    }
+  ],
+  "4.4": [
+    {
+      "concept": "词嵌入语义运算 (Word Embedding Arithmetic)",
+      "definition": "v(国王)-v(男人)+v(女人)≈v(女王)——向量加减可操作语义属性，高维空间方向编码抽象概念",
+      "used_in": ["第5章(余弦相似度计算)", "第29章(Transformer Q·K语义匹配)"]
+    }
   ]
 }

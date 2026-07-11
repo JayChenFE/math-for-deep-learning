@@ -118,5 +118,29 @@
     "quote": "第5章用向量点积计算两个嵌入的相似度（Transformer中Q·K就是两个向量的点积，第29章）",
     "target_chapter": "第5章",
     "status": "待验证"
+  },
+  {
+    "ref_id": "REF-016",
+    "source_chapter": "第4章",
+    "source_section": "4.4",
+    "quote": "第5章将正式引入余弦相似度并演示用向量点积做推荐系统。第29章Transformer的Q@K^T本质上是在512维空间中对每对token做大型余弦相似度计算",
+    "target_chapter": "第29章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-017",
+    "source_chapter": "第4章",
+    "source_section": "4.1",
+    "quote": "第29章Transformer的每个Sublayer后面都有一个残差连接x=x+Sublayer(x)——这个加法是Transformer能训练到上百层的根基",
+    "target_chapter": "第29章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-018",
+    "source_chapter": "第4章",
+    "source_section": "4.2",
+    "quote": "第24章的各种优化器本质上都是在改进lr*gradient这个最基础的数乘操作",
+    "target_chapter": "第24章",
+    "status": "待验证"
   }
 ]
