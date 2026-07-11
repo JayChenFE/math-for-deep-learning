@@ -832,5 +832,16 @@
         "第35章(Agent工具调用)"
       ]
     }
+  ],
+  "23": [
+    {
+      "concept": "梯度爆炸/消失+梯度裁剪",
+      "definition": "链式因子>1指数爆炸,<1消失; clip_grad_norm_:if|g|>max_norm->g=g*max_norm/|g|,方向不变; RNN标配,Transformer保留最后防线",
+      "used_in": [
+        "第31章(训练循环)",
+        "第30章(残差连接)",
+        "第21章(LayerNorm)"
+      ]
+    }
   ]
 }

@@ -140,3 +140,6 @@
 
 ## 第22章：Softmax溢出与Logit Bias
 - 2026-07-12 | test pass | 10 cells nb | 5 exercises
+
+## 第23章：梯度爆炸与裁剪
+- 2026-07-12 | test pass | 8 cells nb | 2 exercises
