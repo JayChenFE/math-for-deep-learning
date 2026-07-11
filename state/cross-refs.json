@@ -110,5 +110,13 @@
     "quote": "Transformer mask broadcasting (Ch29)",
     "target": "Ch29",
     "status": "pending"
+  },
+  {
+    "ref_id": "REF-019",
+    "source": "Ch7",
+    "section": "7.4",
+    "quote": "Closed-form -> Ch26 normal equation",
+    "target": "Ch26",
+    "status": "pending"
   }
 ]

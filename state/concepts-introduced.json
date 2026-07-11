@@ -271,5 +271,23 @@
         "Ch30"
       ]
     }
+  ],
+  "7.1-7.3": [
+    {
+      "concept": "Inverse/Singular/Pseudoinverse",
+      "definition": "A^-1 undoes A; singular=det=0; pinv=least-squares fallback",
+      "used_in": [
+        "Ch26"
+      ]
+    }
+  ],
+  "7.4": [
+    {
+      "concept": "Normal Equation",
+      "definition": "w=(X^T X)^-1 X^T y, one-step optimal weights",
+      "used_in": [
+        "Ch26"
+      ]
+    }
   ]
 }
