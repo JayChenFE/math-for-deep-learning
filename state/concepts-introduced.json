@@ -564,5 +564,40 @@
         "第30章(训练循环)"
       ]
     }
+  ],
+  "14.1-14.4": [
+    {
+      "concept": "计算图(Computational Graph)",
+      "definition": "有向无环图,节点=操作,边=张量; 前向计算结果,反向传递梯度(本地梯度x上游梯度)",
+      "used_in": [
+        "第28章(手写反向传播)",
+        "第30章(训练循环)"
+      ]
+    },
+    {
+      "concept": "自动微分(Autograd)",
+      "definition": ".backward()自动遍历计算图执行链式法则; 每个节点只需本地梯度+上游梯度; 动态建图(Define-by-Run)",
+      "used_in": [
+        "第28章",
+        "第30章"
+      ]
+    }
+  ],
+  "14.5-14.6": [
+    {
+      "concept": "动态计算图",
+      "definition": "PyTorch用Define-by-Run:每次forward即时建图,backward后丢弃; 灵活支持变长输入和条件分支",
+      "used_in": [
+        "第30章(训练)"
+      ]
+    },
+    {
+      "concept": "detach()与no_grad()",
+      "definition": "detach断开单个张量(分析用); no_grad关闭整块梯度追踪(推理/评估用); 省显存省时间",
+      "used_in": [
+        "第29章(KV Cache推理)",
+        "第30章(GPT-2生成)"
+      ]
+    }
   ]
 }
