@@ -2,7 +2,7 @@
 
 > 本书全称：《深度学习的数学工程：从代码直觉到注意力机制》
 > 目标读者：有 Python 基础 + 高中数学，目标为读懂 Transformer 原理的 Agent 开发者
-> 全书 31 章 + 7 附录
+> 全书 35 章 + 7 附录
 
 ---
 
@@ -254,7 +254,7 @@ def scaled_dot_product_attention(Q, K, V, mask=None):
 第1章(数/变量/函数)  ← 全书根基
 ├─ 第2章(变化的直觉/斜率)
 │   └─ 第10章(导数) → 第11章(偏导) → 第12章(梯度) → 第13章(链式法则)
-│       └─ 第14章(计算图/自动微分) → 第28章(手写反向传播) → 第31章(训练循环)
+│       └─ 第14章(计算图/自动微分) → 第28章(手写反向传播) → 第31章(训练循环微观解剖)
 │
 ├─ 第3章(标量/向量/张量)
 │   └─ 第4章(向量加减数乘)
@@ -269,14 +269,15 @@ def scaled_dot_product_attention(Q, K, V, mask=None):
 │   ├─ 第18章(CLT) → 第24章(Mini-Batch SGD 理论依据)
 │   └─ 第19章(信息论) → 第27章(交叉熵损失)
 │
-├─ 第20章(浮点数) → 第21章(归一化) → 第22章(softmax溢出) → 第29~31章(稳定版softmax)
+├─ 第20章(浮点数) → 第21章(归一化) → 第22章(softmax溢出) → 第29~35章(稳定版softmax/注意力/训练/推理)
 │
 ├─ 第23章(梯度爆炸/裁剪) ················ 第31章(训练循环)
 ├─ 第24章(优化算法) ···················· 第31章(optimizer.step())
 └─ 第25章(权重初始化)
 
-Transformer 三章拆解（第29~31章）:
-  第29章(注意力核心：QKV+缩放点积) → 第30章(多头架构+Block组装) → 第31章(训练与推理+采样实战)
+Transformer 七章拆解（第29~35章）:
+  第29章(注意力核心：QKV+缩放点积) → 第30章(多头架构+Block组装) → 第31章(训练循环微观解剖)
+  → 第32章(KV Cache推理加速) → 第33章(解码策略) → 第34章(微调+LoRA) → 第35章(Agent工具调用+格式约束)
 
 说明：
   ─→  表示直接前后依赖（前一章是后一章的前置知识）
@@ -394,9 +395,12 @@ Transformer 三章拆解（第29~31章）:
 | 多头注意力   | Multi-Head Attention                | 第30章       |
 | 位置编码     | Positional Encoding                 | 第29章       |
 | 残差连接     | Residual Connection                 | 第30章       |
-| 低秩适配     | Low-Rank Adaptation (LoRA)          | 第9章        |
-| 自回归       | Autoregressive                      | 第31章       |
-| KV Cache     | Key-Value Cache                     | 第31章       |
+| 低秩适配     | Low-Rank Adaptation (LoRA)          | 第9章/第34章 |
+| 自回归       | Autoregressive                      | 第32章       |
+| KV Cache     | Key-Value Cache                     | 第32章       |
+| 梯度检查点   | Gradient Checkpointing              | 第31章       |
+| 核采样       | Nucleus Sampling (Top-p)            | 第33章       |
+| 工具调用     | Function Calling                    | 第35章       |
 
 ---
 

@@ -4,9 +4,9 @@
 
 # Mathematical Engineering for Deep Learning: From Code Intuition to Attention Mechanisms
 
-> **Subtitle**: A Complete 31-Chapter Tutorial with Exercises, Notebooks, and Runnable Code – **A Practical Math Guide Tailored for Agent Developers**, with **7 Appendices**
+> **Subtitle**: A Complete 35-Chapter Tutorial with Exercises, Notebooks, and Runnable Code – **A Practical Math Guide Tailored for Agent Developers**, with **7 Appendices**
 
-[![Chapters](https://img.shields.io/badge/Chapters-31-blue)](./chapters/)
+[![Chapters](https://img.shields.io/badge/Chapters-35-blue)](./chapters/)
 [![Notebooks](https://img.shields.io/badge/Notebooks-One_per_Chapter-orange)](./notebooks/)
 [![Exercises](https://img.shields.io/badge/Exercises-Full_Solutions-green)](./exercises/)
 [![Python](https://img.shields.io/badge/Python-3.10+-yellow)](https://www.python.org/)
@@ -105,7 +105,7 @@ This book is AI‑assisted but human‑curated. The `state/` directory maintains
 
 ---
 
-## 📖 Book Structure (31 Chapters + 7 Appendices)
+## 📖 Book Structure (35 Chapters + 7 Appendices)
 
 | Part                             | Chapters | Topic                                                              | Agent Touchpoints |
 | :------------------------------- | :------- | :----------------------------------------------------------------- | :---------------- |
@@ -115,7 +115,7 @@ This book is AI‑assisted but human‑curated. The `state/` directory maintains
 | **IV: Probability & Statistics** | 15‑19    | Distributions, Bayes, information theory                           | ✅ Ch 15, 16, 19  |
 | **V: Numerical Methods**         | 20‑25    | Floating point, normalisation, optimisation algorithms             | ✅ Ch 22, 24      |
 | **VI: Neural Networks**          | 26‑28    | Linear regression, logistic regression, hand‑written backprop      | —                 |
-| **VII: Transformer**             | 29‑31    | Single‑head attention → Multi‑head assembly → Training & inference | ✅ Ch 31          |
+| **VII: Transformer**             | 29‑35    | Single‑head attention → Multi‑head → Training → KV Cache → Decoding → Fine‑tuning → Agent tools | ✅ Ch 31‑35      |
 
 ---
 
