@@ -56,7 +56,60 @@ print("交换律和结合律验证通过")
 
 ---
 
-## 4. （代码）中国−北京+巴黎≈法国
+## 4. （代码）Agent 状态迁移轨迹
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+np.random.seed(42)
+
+# 5 个随机动作向量
+actions = [
+    np.array([2.5, 0.5]),
+    np.array([-0.5, 2.0]),
+    np.array([1.0, -1.5]),
+    np.array([2.0, 1.0]),
+    np.array([-1.0, 1.5]),
+]
+
+# 状态迁移：从原点出发
+state = np.array([0.0, 0.0])
+states = [state.copy()]
+for a in actions:
+    state = state + a
+    states.append(state.copy())
+states = np.array(states)
+
+# 可视化
+fig, ax = plt.subplots(figsize=(8, 7))
+colors = plt.cm.viridis(np.linspace(0, 1, len(actions)))
+
+for i, (sb, a) in enumerate(zip(states[:-1], actions)):
+    ax.quiver(sb[0], sb[1], a[0], a[1],
+              angles='xy', scale_units='xy', scale=1,
+              color=colors[i], width=0.03, alpha=0.8)
+
+ax.plot(states[:, 0], states[:, 1], 'ko-', ms=8, lw=1.5, label='State trajectory')
+ax.plot(states[0, 0], states[0, 1], 'go', ms=12, label='Start')
+ax.plot(states[-1, 0], states[-1, 1], 'r*', ms=18, label='End')
+ax.set_xlabel('Dim 1'); ax.set_ylabel('Dim 2')
+ax.set_title('Agent State Transition: state += action (5 steps)')
+ax.legend(); ax.grid(alpha=0.3); ax.set_aspect('equal'); plt.show()
+
+# 验证：总位移 = 所有动作之和
+total = sum(actions)
+net = states[-1] - states[0]
+print(f"Sum of actions = {total}")
+print(f"End - Start    = {net}")
+print(f"Match: {np.allclose(total, net)}")
+```
+
+**预期输出**：轨迹从原点(绿点)出发，经 5 步迁移到达终点(红星)。每步箭头=动作向量，终点−起点=所有动作之和，验证了"状态迁移=向量加法链"。
+
+---
+
+## 5. （代码）中国−北京+巴黎≈法国
 
 ```python
 import numpy as np

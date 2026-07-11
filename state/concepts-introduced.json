@@ -684,5 +684,16 @@
         "数据预处理/特征提取"
       ]
     }
+  ],
+  "4.5": [
+    {
+      "concept": "Agent状态迁移(State Transition)",
+      "definition": "s_new=s_current+a; 状态迁移=语义空间中的向量加法; ReAct Agent的数学本质",
+      "used_in": [
+        "第5.5节(RAG检索)",
+        "第6.6节(连续批处理)",
+        "附录D(Agent速查表)"
+      ]
+    }
   ]
 }

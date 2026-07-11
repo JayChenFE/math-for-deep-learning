@@ -326,5 +326,21 @@
     "quote": "第18章中心极限定理揭示为什么样本均值趋向正态分布",
     "target_chapter": "第18章",
     "status": "待验证"
+  },
+  {
+    "ref_id": "REF-042",
+    "source_chapter": "第4章",
+    "source_section": "4.5",
+    "quote": "第5.5节将把状态迁移直觉扩展到RAG检索",
+    "target_chapter": "第5章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-043",
+    "source_chapter": "第4章",
+    "source_section": "4.5",
+    "quote": "第6.6节从矩阵乘法视角分析连续批处理",
+    "target_chapter": "第6章",
+    "status": "待验证"
   }
 ]
