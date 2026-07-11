@@ -44,4 +44,51 @@ ax.legend(); ax.grid(alpha=0.3); plt.show()
 
 ---
 
+## 3. （代码）梯度裁剪对比
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+np.random.seed(42)
+n_layers = 20
+
+def simulate_with_clip(scale, max_norm=1.0):
+    """模拟带梯度裁剪的传播"""
+    grads = [1.0]
+    for _ in range(n_layers):
+        W = np.random.randn(1, 1) * scale
+        raw_grad = grads[-1] * abs(W[0, 0])
+        # 梯度裁剪：如果范数超过 max_norm，等比缩放
+        clipped = raw_grad if raw_grad <= max_norm else max_norm * (raw_grad / raw_grad)
+        grads.append(clipped)
+    return grads
+
+fig, ax = plt.subplots(figsize=(10, 5))
+
+# 无裁剪
+grads_no_clip = [1.0]
+for _ in range(n_layers):
+    W = np.random.randn(1, 1) * 1.5
+    grads_no_clip.append(grads_no_clip[-1] * abs(W[0, 0]))
+
+# 有裁剪
+grads_clipped = simulate_with_clip(1.5, max_norm=1.0)
+
+ax.plot(range(n_layers + 1), grads_no_clip, 'o-', markersize=3, color='red', label='No clipping')
+ax.plot(range(n_layers + 1), grads_clipped, 'o-', markersize=3, color='green', label='Clipped (max_norm=1.0)')
+ax.axhline(y=1.0, color='blue', ls='--', alpha=0.5, label='Clip threshold')
+ax.set_yscale('log'); ax.set_xlabel('Layer (reverse)'); ax.set_ylabel('Gradient norm')
+ax.set_title('Effect of Gradient Clipping (scale=1.5, Explosion)')
+ax.legend(); ax.grid(alpha=0.3); plt.show()
+
+print("无裁剪: 最终梯度 =", grads_no_clip[-1])
+print("有裁剪: 最终梯度 =", grads_clipped[-1])
+print("裁剪将爆炸梯度控制在安全范围内，防止参数'飞走'")
+```
+
+**预期输出**：无裁剪时梯度指数爆炸（>>1），裁剪后所有层的梯度范数 ≤ 1.0。裁剪作为"安全网"确保梯度永远不会超过阈值，代价是丢失了部分梯度方向信息（被等比压缩）。
+
+---
+
 > **答案校验通过** — 2026-07-12

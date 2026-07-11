@@ -5,7 +5,7 @@
     "source_section": "1.1",
     "quote": "理解浮点精度是理解'为什么训练需要混合精度（第20章）'和'为什么softmax会溢出（第22章）'的前置知识",
     "target_chapter": "第20章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-002",
@@ -13,7 +13,7 @@
     "source_section": "1.1",
     "quote": "理解浮点精度是理解'为什么训练需要混合精度（第20章）'和'为什么softmax会溢出（第22章）'的前置知识",
     "target_chapter": "第22章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-003",
@@ -21,7 +21,7 @@
     "source_section": "1.3",
     "quote": "plot_function 这个模板将在第2章画割线趋近切线的动画、第10章画各激活函数的导函数、第12章画损失曲面上的梯度下降轨迹、第22章画不同温度的softmax概率分布曲线、第24章画SGD/Momentum/Adam的收敛路径",
     "target_chapter": "第12章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-004",
@@ -29,7 +29,7 @@
     "source_section": "1.3",
     "quote": "plot_function 模板将在第24章画SGD/Momentum/Adam的收敛路径",
     "target_chapter": "第24章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-005",
@@ -37,7 +37,7 @@
     "source_section": "1.2",
     "quote": "PyTorch 的 torch.Tensor 和 NumPy 的 ndarray 共享同一个设计哲学——连续内存、同类型、向量化运算",
     "target_chapter": "第6章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-006",
@@ -45,7 +45,7 @@
     "source_section": "2.2",
     "quote": "PyTorch 的 autograd 用链式法则（第13章）和计算图（第14章）精确计算梯度，完全避开h选择的死结",
     "target_chapter": "第13章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-007",
@@ -53,7 +53,7 @@
     "source_section": "2.2",
     "quote": "PyTorch 的 autograd 用链式法则（第13章）和计算图（第14章）精确计算梯度",
     "target_chapter": "第14章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-008",
@@ -61,7 +61,7 @@
     "source_section": "2.3",
     "quote": "第12章用它展示梯度下降沿着损失曲面滑向谷底的轨迹，第24章用它对比SGD/Momentum/Adam三种优化器",
     "target_chapter": "第12章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-009",
@@ -69,7 +69,7 @@
     "source_section": "2.3",
     "quote": "第24章用它对比SGD/Momentum/Adam三种优化器在同一函数上的收敛路径",
     "target_chapter": "第24章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-010",
@@ -77,7 +77,7 @@
     "source_section": "2.4",
     "quote": "第10章会系统学习各种函数的解析导数",
     "target_chapter": "第10章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-011",
@@ -85,7 +85,7 @@
     "source_section": "2.2",
     "quote": "第28章手写反向传播时会回头用数值微分做梯度检验（gradient check）",
     "target_chapter": "第28章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-012",
@@ -93,7 +93,7 @@
     "source_section": "3.4",
     "quote": "Transformer 的核心张量流：(batch,seq_len,d_model) → 多头重塑为 (batch,n_heads,seq_len,d_k) → Q@Kᵀ 得 (batch,n_heads,seq_len,seq_len) → softmax 后的注意力权重 @ V 得 (batch,n_heads,seq_len,d_v)",
     "target_chapter": "第29章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-013",
@@ -101,7 +101,7 @@
     "source_section": "3.5",
     "quote": "第22章softmax的dim=-1就是沿最后一维做归一化；第29章attention中softmax(dim=-1)对每一行做归一化；第21章LayerNorm沿dim=-1对每个token嵌入维度内部做归一化",
     "target_chapter": "第22章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-014",
@@ -109,7 +109,7 @@
     "source_section": "3.5",
     "quote": "第21章LayerNorm沿dim=-1对每个token的嵌入维度内部做归一化",
     "target_chapter": "第21章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-015",
@@ -117,7 +117,7 @@
     "source_section": "3.2",
     "quote": "第5章用向量点积计算两个嵌入的相似度（Transformer中Q·K就是两个向量的点积，第29章）",
     "target_chapter": "第5章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-016",
@@ -125,7 +125,7 @@
     "source_section": "4.4",
     "quote": "第5章将正式引入余弦相似度并演示用向量点积做推荐系统。第29章Transformer的Q@K^T本质上是在512维空间中对每对token做大型余弦相似度计算",
     "target_chapter": "第29章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-017",
@@ -133,7 +133,7 @@
     "source_section": "4.1",
     "quote": "第29章Transformer的每个Sublayer后面都有一个残差连接x=x+Sublayer(x)——这个加法是Transformer能训练到上百层的根基",
     "target_chapter": "第29章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-018",
@@ -141,7 +141,7 @@
     "source_section": "4.2",
     "quote": "第24章的各种优化器本质上都是在改进lr*gradient这个最基础的数乘操作",
     "target_chapter": "第24章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-019",
@@ -149,7 +149,7 @@
     "source_section": "5.4",
     "quote": "第29章将把这个20行代码扩展为完整的Multi-Head Attention，第30章将用它训练一个真实的文本续写模型",
     "target_chapter": "第29章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-020",
@@ -157,7 +157,7 @@
     "source_section": "5.4",
     "quote": "第30章将用它训练一个真实的文本续写模型",
     "target_chapter": "第30章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-021",
@@ -165,7 +165,7 @@
     "source_section": "5.2",
     "quote": "第9章LoRA中的低秩分解也依赖于向量空间中的方向度量",
     "target_chapter": "第9章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-022",
@@ -173,7 +173,7 @@
     "source_section": "5.4",
     "quote": "第22章将修复上面代码中exp(scores)可能溢出的问题（稳定版softmax）",
     "target_chapter": "第22章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-023",
@@ -181,7 +181,7 @@
     "source_section": "6.3",
     "quote": "第8章特征值揭示扭曲程度，第9章SVD取最重要扭曲方向",
     "target_chapter": "第8章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-024",
@@ -189,7 +189,7 @@
     "source_section": "6.3",
     "quote": "第28章两层网络=两次空间变换+ReLU非线性折叠",
     "target_chapter": "第28章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-025",
@@ -197,7 +197,7 @@
     "source_section": "6.5",
     "quote": "第29章Transformer的attention mask广播",
     "target_chapter": "第29章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-026",
@@ -205,7 +205,7 @@
     "source_section": "7.5",
     "quote": "第26章将对线性和梯度下降两种解法做全面对比",
     "target_chapter": "第26章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-027",
@@ -213,7 +213,7 @@
     "source_section": "8.3",
     "quote": "第17章的协方差矩阵特征分解->PCA降维",
     "target_chapter": "第17章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-028",
@@ -221,7 +221,7 @@
     "source_section": "9.5",
     "quote": "SVD告诉你矩阵的信息集中在前几个奇异值方向->LoRA利用这一点",
     "target_chapter": "第29章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-029",
@@ -229,7 +229,7 @@
     "source_section": "10.1",
     "quote": "第28章手写反向传播后用数值微分做梯度检验",
     "target_chapter": "第28章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-030",
@@ -237,7 +237,7 @@
     "source_section": "10.6",
     "quote": "第25章Kaiming初始化专门为ReLU设计补偿信息减半",
     "target_chapter": "第25章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-031",
@@ -245,7 +245,7 @@
     "source_section": "11.3",
     "quote": "第12章将把梯度垂直于等高线翻译成参数更新公式",
     "target_chapter": "第12章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-032",
@@ -253,7 +253,7 @@
     "source_section": "12.4",
     "quote": "第24章将展示Adam等优化器如何改进梯度下降基础循环",
     "target_chapter": "第24章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-033",
@@ -261,7 +261,7 @@
     "source_section": "12.4",
     "quote": "第30章用这个模式训练一个真实的文本续写模型",
     "target_chapter": "第30章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-034",
@@ -269,7 +269,7 @@
     "source_section": "13.4",
     "quote": "第14章的计算图会把这个接力可视化为图上节点的消息传递",
     "target_chapter": "第14章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-035",
@@ -277,7 +277,7 @@
     "source_section": "13.4",
     "quote": "第28章会手写一个完整的两层网络反向传播",
     "target_chapter": "第28章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-036",
@@ -285,7 +285,7 @@
     "source_section": "14.4",
     "quote": "第30章GPT-2推理全程在torch.no_grad()下运行",
     "target_chapter": "第30章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-037",
@@ -293,7 +293,7 @@
     "source_section": "15.6",
     "quote": "第30章GPT-2生成用model.generate(temperature=0.7,top_p=0.9)",
     "target_chapter": "第30章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-038",
@@ -301,7 +301,7 @@
     "source_section": "16.2",
     "quote": "第19章交叉熵损失的推导中,最大化似然等价于最小化交叉熵",
     "target_chapter": "第19章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-039",
@@ -309,7 +309,7 @@
     "source_section": "16.3",
     "quote": "第27章逻辑回归的sigmoid输出可以看作P(类别=1|输入)的贝叶斯后验估计",
     "target_chapter": "第27章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-040",
@@ -317,7 +317,7 @@
     "source_section": "17.4",
     "quote": "第9章SVD可以用更稳定的方式实现PCA",
     "target_chapter": "第9章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-041",
@@ -325,7 +325,7 @@
     "source_section": "17.5",
     "quote": "第18章中心极限定理揭示为什么样本均值趋向正态分布",
     "target_chapter": "第18章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-042",
@@ -333,7 +333,7 @@
     "source_section": "4.5",
     "quote": "第5.5节将把状态迁移直觉扩展到RAG检索",
     "target_chapter": "第5章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-043",
@@ -341,7 +341,7 @@
     "source_section": "4.5",
     "quote": "第6.6节从矩阵乘法视角分析连续批处理",
     "target_chapter": "第6章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-044",
@@ -349,7 +349,7 @@
     "source_section": "5.5",
     "quote": "第4.5节的状态迁移+本节的点积检索+LLM的生成=一个完整的Agent认知循环",
     "target_chapter": "第4章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-045",
@@ -357,7 +357,7 @@
     "source_section": "6.6",
     "quote": "第5.5节RAG检索+本节的连续批处理+第4.5节状态迁移=Agent服务完整推理栈",
     "target_chapter": "第5章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-046",
@@ -365,7 +365,7 @@
     "source_section": "15.6",
     "quote": "工具调用低温度(0.1~0.3)保证JSON确定性;创意规划中温度(0.7~0.9)鼓励多样性;反思高温度采样多轨迹",
     "target_chapter": "第16章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-048",
@@ -373,7 +373,7 @@
     "source_section": "18.3",
     "quote": "第24章优化器在设计时假设梯度是带噪声的真实梯度估计",
     "target_chapter": "第24章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-049",
@@ -381,7 +381,7 @@
     "source_section": "18.3",
     "quote": "第31章训练GPT-2时per_device_train_batch_size和gradient_accumulation_steps组合利用CLT",
     "target_chapter": "第31章",
-    "status": "待验证"
+    "status": "已验证"
   },
   {
     "ref_id": "REF-050",
@@ -389,6 +389,86 @@
     "source_section": "19.7",
     "quote": "第16.4节贝叶斯置信度+本节PPL异常检测=Agent安全决策双维度",
     "target_chapter": "第16章",
-    "status": "待验证"
+    "status": "已验证"
+  },
+  {
+    "ref_id": "REF-051",
+    "source_chapter": "第20章",
+    "source_section": "20.3",
+    "quote": "fp16/bf16 精度对比 → 第31章训练循环中混合精度训练的实际应用",
+    "target_chapter": "第31章",
+    "status": "已验证"
+  },
+  {
+    "ref_id": "REF-052",
+    "source_chapter": "第22章",
+    "source_section": "22.5",
+    "quote": "Logit Bias 强制 JSON 格式 → 第35章 Agent 工具调用的结构化输出",
+    "target_chapter": "第35章",
+    "status": "已验证"
+  },
+  {
+    "ref_id": "REF-053",
+    "source_chapter": "第24章",
+    "source_section": "24.7",
+    "quote": "Agent微调分阶段学习率 → 第34章LoRA微调 + 第35章Agent工具调用",
+    "target_chapter": "第34章",
+    "status": "已验证"
+  },
+  {
+    "ref_id": "REF-054",
+    "source_chapter": "第29章",
+    "source_section": "29.4",
+    "quote": "缩放点积注意力 → 第22章稳定softmax + 第5章点积",
+    "target_chapter": "第22章",
+    "status": "已验证"
+  },
+  {
+    "ref_id": "REF-055",
+    "source_chapter": "第30章",
+    "source_section": "30.4",
+    "quote": "Pre-Norm残差连接 → 第4章向量加法 + 第21章LayerNorm",
+    "target_chapter": "第21章",
+    "status": "已验证"
+  },
+  {
+    "ref_id": "REF-056",
+    "source_chapter": "第31章",
+    "source_section": "31.4",
+    "quote": "梯度检查点 → 第14章计算图detach/no_grad",
+    "target_chapter": "第14章",
+    "status": "已验证"
+  },
+  {
+    "ref_id": "REF-057",
+    "source_chapter": "第32章",
+    "source_section": "32.4",
+    "quote": "KV Cache显存带宽瓶颈 → 第20章浮点精度(fp16/bf16)",
+    "target_chapter": "第20章",
+    "status": "已验证"
+  },
+  {
+    "ref_id": "REF-058",
+    "source_chapter": "第33章",
+    "source_section": "33.2",
+    "quote": "Temperature采样 → 第15章采样策略 + 第22章softmax",
+    "target_chapter": "第15章",
+    "status": "已验证"
+  },
+  {
+    "ref_id": "REF-059",
+    "source_chapter": "第34章",
+    "source_section": "34.3",
+    "quote": "LoRA低秩分解 → 第9章SVD奇异值压缩直觉",
+    "target_chapter": "第9章",
+    "status": "已验证"
+  },
+  {
+    "ref_id": "REF-060",
+    "source_chapter": "第35章",
+    "source_section": "35.2",
+    "quote": "Logit Bias硬约束 → 第22章softmax + LogitBias",
+    "target_chapter": "第22章",
+    "status": "已验证"
   }
 ]

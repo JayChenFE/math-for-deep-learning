@@ -941,5 +941,74 @@
         "第35章"
       ]
     }
+  ],
+  "34": [
+    {
+      "concept": "nn.Module 微型语言模型 (MiniLM)",
+      "definition": "用 nn.Module 手写 Embedding + N×Block + LM Head 的完整架构，揭示 AutoModelForCausalLM 的本质只是将 n_blocks 从 2 放大到 12",
+      "used_in": [
+        "第35章(Agent工具调用)"
+      ]
+    },
+    {
+      "concept": "LoRA (Low-Rank Adaptation)",
+      "definition": "用两个低秩矩阵 B(d×r) 和 A(r×d) 模拟权重更新 ΔW=BA，可训练参数量减少 99% 但效果接近全量微调。核心直觉来自第9章 SVD：有效信息集中在前 r 个奇异值方向",
+      "used_in": [
+        "第9章(SVD低秩分解)",
+        "第35章(Agent工具调用)"
+      ]
+    },
+    {
+      "concept": "全量微调 vs 冻结微调 (Full Fine-tune vs Freeze)",
+      "definition": "全量微调更新所有参数（显存高，效果最好）；冻结底层只训练最后几层（防止灾难性遗忘）；LoRA 是两者的工程折中",
+      "used_in": [
+        "第35章(Agent工具调用)"
+      ]
+    },
+    {
+      "concept": "Early Stopping",
+      "definition": "监控验证集 Loss，连续 patience 轮不下降时终止训练，防止过拟合。常与 AdamW 的 Weight Decay 配合使用",
+      "used_in": [
+        "第31章(训练循环)"
+      ]
+    },
+    {
+      "concept": "HuggingFace PEFT (Parameter-Efficient Fine-Tuning)",
+      "definition": "LoraConfig(r, lora_alpha, target_modules) 一行代码注入 LoRA 适配器到 Attention 层，model.merge_and_unload() 将适配器合并回原始权重",
+      "used_in": [
+        "第35章(Agent工具调用)"
+      ]
+    }
+  ],
+  "35": [
+    {
+      "concept": "工具调用协议 (Function Calling Protocol)",
+      "definition": "用 JSON Schema 定义工具接口（name, parameters, required），将 Schema 注入 System Prompt 要求模型输出可解析的 JSON 字符串。Agent 的核心交互契约",
+      "used_in": [
+        "第22章(Logit Bias)"
+      ]
+    },
+    {
+      "concept": "JSON 模式三层保险 (Three-Layer Format Safety)",
+      "definition": "第一层 Prompt 约束（'You MUST output valid JSON'）；第二层 Logit Bias 硬约束（用 torch.where 将非法 token logits 置为 -inf）；第三层解析重试（json.loads 失败后降温度重采样 + 指数退避）",
+      "used_in": [
+        "第22章(Logit Bias)",
+        "第33章(采样策略)"
+      ]
+    },
+    {
+      "concept": "结构化解码 (Structured Decoding / Guidance / Outlines)",
+      "definition": "用上下文无关文法(CFG)或正则表达式在解码时强制匹配格式——比 Logit Bias 更完整的状态机方案，是生产级 Agent 的真实选择",
+      "used_in": [
+        "第33章(解码策略)"
+      ]
+    },
+    {
+      "concept": "ensure_json 装饰器 (ensure_json Decorator)",
+      "definition": "自动检测生成输出是否为合法 JSON，失败时触发指数退避重试（base_delay × 2^attempt），最多重试 max_retries 次。将「格式纠错」从 prompt engineering 变为工程化保障",
+      "used_in": [
+        "第22章(Logit Bias)"
+      ]
+    }
   ]
 }

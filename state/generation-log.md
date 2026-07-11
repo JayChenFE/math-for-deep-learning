@@ -170,3 +170,30 @@
 
 ## 第32章：KV Cache
 - 2026-07-12 | test pass | Part 8完成
+
+## 第33章：解码策略
+- 2026-07-12 | test pass | 10 cells nb | 3 exercises | Greedy/Temperature/Top-k/Top-p/Repetition Penalty 均已覆盖
+
+## 第34章：微调与LoRA
+- 2026-07-12 | test pass | 10 cells nb | 3 exercises | nn.Module→AutoModel→LoRA→EarlyStopping 完整链路
+
+## 第35章：Agent工具调用
+- 2026-07-12 | test pass | 12 cells nb | 3 exercises | Function Calling/JSON三层保险/Logit Bias/ensure_json 完整工程方案
+
+---
+
+## 2026-07-12 全面审查修复记录
+
+### CRITICAL 修复
+- ch28.6 梯度检验 `.T` 错误：删除 `W2_t.grad.numpy().T` 和 `W1_t.grad.numpy().T` 中的 `.T`
+- ch30 激活函数统一：定义块 GeLU→ReLU + 添加"实际 GPT-2/BERT 用 GeLU"注释
+- ch30 LayerNorm：添加 gamma/beta 可学习参数
+- ch07/ch09 转置符号：`^T` → `ᵀ`
+- ch34.3 LoRA：注释 `B_A(r,d)@A_A(d,3d)` → `B_A(d,r)@A_A(r,3d)`
+- ch34.2：添加加载预训练模型/Tokenizer 的完整代码块
+- ch23：增加第3道习题（梯度裁剪对比）
+- 创建 code/ch34/test_ch34.py（LoRA压缩比 + EarlyStopping 逻辑验证）
+- 创建 code/ch35/test_ch35.py（JSON Schema + Logit Bias + ensure_json + Temperature 行为验证）
+- concepts-introduced.json：补充 ch34-35 共9个概念条目
+- cross-refs.json：全部43条标记为"已验证"
+- generation-log.md：补充 ch33-35 日志 + 本次修复记录

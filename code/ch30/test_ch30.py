@@ -28,13 +28,14 @@ h = np.maximum(0, concat @ W1 + b1)
 ffn_out = h @ W2 + b2
 assert ffn_out.shape == (batch, seq_len, d_model)
 
-# 30.4 LayerNorm + residual
-def layer_norm(x, eps=1e-5):
+# 30.4 LayerNorm + residual (with learnable gamma/beta)
+def layer_norm(x, gamma, beta, eps=1e-5):
     mean = x.mean(axis=-1, keepdims=True)
     var = x.var(axis=-1, keepdims=True)
-    return (x - mean) / np.sqrt(var + eps)
+    return gamma * (x - mean) / np.sqrt(var + eps) + beta
 
-ln_out = layer_norm(X)
+gamma = np.ones(d_model); beta = np.zeros(d_model)
+ln_out = layer_norm(X, gamma, beta)
 assert ln_out.shape == X.shape
 residual = X + ffn_out
 assert residual.shape == X.shape
@@ -51,10 +52,12 @@ class TransformerBlock:
         self.b1 = np.zeros(1024)
         self.W2 = np.random.randn(1024, 256) * 0.02
         self.b2 = np.zeros(256)
+        self.gamma1 = np.ones(256); self.beta1 = np.zeros(256)
+        self.gamma2 = np.ones(256); self.beta2 = np.zeros(256)
 
-    def ln(self, x, eps=1e-5):
+    def ln(self, x, gamma, beta, eps=1e-5):
         m = x.mean(axis=-1, keepdims=True); v = x.var(axis=-1, keepdims=True)
-        return (x - m) / np.sqrt(v + eps)
+        return gamma * (x - m) / np.sqrt(v + eps) + beta
 
     def attn(self, x):
         B, L, D = x.shape
@@ -72,8 +75,8 @@ class TransformerBlock:
         return h @ self.W2 + self.b2
 
     def forward(self, x):
-        x = x + self.attn(self.ln(x))
-        x = x + self.ffn(self.ln(x))
+        x = x + self.attn(self.ln(x, self.gamma1, self.beta1))
+        x = x + self.ffn(self.ln(x, self.gamma2, self.beta2))
         return x
 
 block = TransformerBlock()
