@@ -26,7 +26,7 @@ Generate chapters following the strict SOP defined in `CLAUDE.md` §十. Each ch
 
 Before writing a single line of the chapter:
 
-1. **Read the TOC** — `深度学习的数学工程-目录优化版.md` — find the chapter's title, section titles, exercises, and hook target.
+1. **Read the TOC** — `深度学习的数学工程-目录.md` — find the chapter's title, section titles, exercises, and hook target.
 2. **Read `state/concepts-introduced.json`** — verify all prerequisite concepts exist. If a concept this chapter depends on hasn't been introduced yet, STOP and flag it.
 3. **Read `state/cross-refs.json`** — check if any prior chapter made a forward reference to THIS chapter. If so, the reference must be honored in the generated text.
 4. **Read `CLAUDE.md`** — confirm notation (§一), code style (§二), chapter template (§三), and dependency DAG (§四).
