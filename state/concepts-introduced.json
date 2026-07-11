@@ -1,1 +1,53 @@
-{}
+{
+  "1.1": [
+    {
+      "concept": "IEEE 754 浮点数 (IEEE 754 Floating Point)",
+      "definition": "64-bit 二进制近似存储实数（1 符号 + 11 指数 + 52 尾数），约 15-17 位有效数字，导致 0.1+0.2≠0.3",
+      "used_in": ["第20章(混合精度训练)", "第22章(softmax 溢出)"]
+    },
+    {
+      "concept": "浮点比较 (Floating-Point Comparison)",
+      "definition": "用 math.isclose() 或 |a-b|<EPS 容差法判断相等，禁用 == 直接比较浮点数",
+      "used_in": ["第10章(数值微分验证)", "第22章(softmax 输出和验证)"]
+    },
+    {
+      "concept": "int 与 bool",
+      "definition": "int 是精确整数（Python 无上限），bool 是 int 子类（True=1, False=0），可用于累加计数",
+      "used_in": ["全书基础"]
+    }
+  ],
+  "1.2": [
+    {
+      "concept": "NumPy 数组 (ndarray)",
+      "definition": "同类型元素连续内存排列的多维数组，运算在 C 层面向量化执行，比 Python 列表快 20-50 倍",
+      "used_in": ["全书代码基础——每一章都依赖 ndarray 或 torch.Tensor"]
+    },
+    {
+      "concept": "向量化 (Vectorization)",
+      "definition": "用数组级运算（arr**2）替代显式 Python 循环（for x in list: x**2），利用 C 层 SIMD 并行加速",
+      "used_in": ["第4章(向量运算)", "第5章(点积)", "第6章(矩阵乘法)"]
+    },
+    {
+      "concept": "连续内存 (Contiguous Memory)",
+      "definition": "数组元素在 RAM 中紧密排列，CPU 缓存命中率高，是 NumPy/PyTorch 性能的物理根基",
+      "used_in": ["第6章(矩阵乘法性能)", "第29章(Transformer 张量操作)"]
+    }
+  ],
+  "1.3": [
+    {
+      "concept": "函数 (Function)",
+      "definition": "输入到输出的映射规则 f: x→f(x)，Python 中用 def 定义；整个神经网络本质是 f(x;θ)",
+      "used_in": ["第10章(导数)", "第14章(计算图)", "第30章(训练循环)"]
+    },
+    {
+      "concept": "matplotlib 绘图模板",
+      "definition": "plot_function() 可复用模板：np.linspace 采样 → plt.plot 绘图 → 标注轴和图例。全书画图的基础工具",
+      "used_in": ["第2章(割线动画)", "第12章(梯度下降轨迹)", "第22章(softmax 曲线)", "第24章(优化路径)"]
+    },
+    {
+      "concept": "np.linspace",
+      "definition": "在指定区间均匀采样 n 个点返回数组，是将连续函数离散化以绘制图像的标配工具",
+      "used_in": ["全书可视化——每章的 plot/绘图代码都用到"]
+    }
+  ]
+}

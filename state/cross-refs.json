@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "ref_id": "REF-001",
+    "source_chapter": "第1章",
+    "source_section": "1.1",
+    "quote": "理解浮点精度是理解'为什么训练需要混合精度（第20章）'和'为什么softmax会溢出（第22章）'的前置知识",
+    "target_chapter": "第20章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-002",
+    "source_chapter": "第1章",
+    "source_section": "1.1",
+    "quote": "理解浮点精度是理解'为什么训练需要混合精度（第20章）'和'为什么softmax会溢出（第22章）'的前置知识",
+    "target_chapter": "第22章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-003",
+    "source_chapter": "第1章",
+    "source_section": "1.3",
+    "quote": "plot_function 这个模板将在第2章画割线趋近切线的动画、第10章画各激活函数的导函数、第12章画损失曲面上的梯度下降轨迹、第22章画不同温度的softmax概率分布曲线、第24章画SGD/Momentum/Adam的收敛路径",
+    "target_chapter": "第12章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-004",
+    "source_chapter": "第1章",
+    "source_section": "1.3",
+    "quote": "plot_function 模板将在第24章画SGD/Momentum/Adam的收敛路径",
+    "target_chapter": "第24章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-005",
+    "source_chapter": "第1章",
+    "source_section": "1.2",
+    "quote": "PyTorch 的 torch.Tensor 和 NumPy 的 ndarray 共享同一个设计哲学——连续内存、同类型、向量化运算",
+    "target_chapter": "第6章",
+    "status": "待验证"
+  }
+]
