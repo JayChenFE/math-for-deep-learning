@@ -1,66 +1,21 @@
 [
-  {
-    "ref_id": "REF-004",
-    "source_chapter": "第1章",
-    "source_section": "1.1",
-    "quote": "理解浮点精度是理解'为什么训练需要混合精度（第20章）'和'为什么softmax会溢出（第22章）'的前置知识",
-    "target_chapter": "第20章",
-    "status": "待验证"
-  },
-  {
-    "ref_id": "REF-005",
-    "source_chapter": "第1章",
-    "source_section": "1.1",
-    "quote": "理解浮点精度是理解'为什么训练需要混合精度（第20章）'和'为什么softmax会溢出（第22章）'的前置知识",
-    "target_chapter": "第22章",
-    "status": "待验证"
-  },
-  {
-    "ref_id": "REF-006",
-    "source_chapter": "第1章",
-    "source_section": "1.3",
-    "quote": "plot_function 这个模板将在全书反复使用——画激活函数（ReLU、sigmoid）、画损失曲面、画梯度下降轨迹",
-    "target_chapter": "第12章",
-    "status": "待验证"
-  },
-  {
-    "ref_id": "REF-007",
-    "source_chapter": "第2章",
-    "source_section": "2.2",
-    "quote": "PyTorch 的 autograd 不需要你手动选 h——它用链式法则（第13章）精确计算梯度，完全避开数值微分的精度问题",
-    "target_chapter": "第13章",
-    "status": "待验证"
-  },
-  {
-    "ref_id": "REF-008",
-    "source_chapter": "第2章",
-    "source_section": "2.4",
-    "quote": "二阶导数（导数的导数）则描述了'变化本身的变化速度'——这是优化器动量和学习率调度的理论基础",
-    "target_chapter": "第12章",
-    "status": "待验证"
-  },
-  {
-    "ref_id": "REF-009",
-    "source_chapter": "第2章",
-    "source_section": "2.4",
-    "quote": "深度学习中，'梯度'就是多元函数的导数。SGD 每一步用梯度决定参数更新的方向和大小（第12章、第24章）",
-    "target_chapter": "第24章",
-    "status": "待验证"
-  },
-  {
-    "ref_id": "REF-010",
-    "source_chapter": "第2章",
-    "source_section": "2.4",
-    "quote": "f'(x) = 2x（第10章将系统学习）",
-    "target_chapter": "第10章",
-    "status": "待验证"
-  },
-  {
-    "ref_id": "REF-011",
-    "source_chapter": "第2章",
-    "source_section": "2.4",
-    "quote": "PyTorch 用的是自动微分（第14章）和符号微分的混合体",
-    "target_chapter": "第14章",
-    "status": "待验证"
-  }
+  {"ref_id": "REF-004", "source": "第1章", "quote": "浮点精度→混合精度(Ch20) + softmax溢出(Ch22)", "target": "第20章", "status": "待验证"},
+  {"ref_id": "REF-005", "source": "第1章", "quote": "浮点精度→softmax溢出", "target": "第22章", "status": "待验证"},
+  {"ref_id": "REF-006", "source": "第1章", "quote": "plot_function 模板→画激活函数/损失曲面/梯度下降轨迹", "target": "第12章", "status": "待验证"},
+  {"ref_id": "REF-007", "source": "第2章", "quote": "autograd 链式法则(Ch13)精确计算梯度", "target": "第13章", "status": "待验证"},
+  {"ref_id": "REF-008", "source": "第2章", "quote": "二阶导数→优化器动量和学习率调度", "target": "第12章", "status": "待验证"},
+  {"ref_id": "REF-009", "source": "第2章", "quote": "SGD 梯度决定参数更新方向(Ch12, Ch24)", "target": "第24章", "status": "待验证"},
+  {"ref_id": "REF-010", "source": "第2章", "quote": "f'(x) = 2x (Ch10 系统学习)", "target": "第10章", "status": "待验证"},
+  {"ref_id": "REF-011", "source": "第2章", "quote": "PyTorch 自动微分(Ch14)", "target": "第14章", "status": "待验证"},
+  {"ref_id": "REF-012", "source": "第3章", "quote": "(batch, seq_len, d_model) 在第29章反复出现", "target": "第29章", "status": "待验证"},
+  {"ref_id": "REF-013", "source": "第3章", "quote": "softmax(dim=-1) 在第22章和第29章出现无数次", "target": "第22章", "status": "待验证"},
+  {"ref_id": "REF-014", "source": "第4章", "quote": "Self-Attention 向量加权组合(Ch29)", "target": "第29章", "status": "待验证"},
+  {"ref_id": "REF-015", "source": "第5章", "quote": "Q@Kᵀ 是批量查询与键的点积矩阵(Ch29)", "target": "第29章", "status": "待验证"},
+  {"ref_id": "REF-016", "source": "第5章", "quote": "推荐排序 = Attention 同构", "target": "第29章", "status": "待验证"},
+  {"ref_id": "REF-017", "source": "第6章", "quote": "多层网络 = 多次连续空间扭曲(Ch28)", "target": "第28章", "status": "待验证"},
+  {"ref_id": "REF-018", "source": "第6章", "quote": "Transformer 中 mask 广播", "target": "第29章", "status": "待验证"},
+  {"ref_id": "REF-019", "source": "第7章", "quote": "闭式解→第26章正规方程推导", "target": "第26章", "status": "待验证"},
+  {"ref_id": "REF-020", "source": "第8章", "quote": "PCA 协方差矩阵特征分解(Ch17)", "target": "第17章", "status": "待验证"},
+  {"ref_id": "REF-021", "source": "第8章", "quote": "特征值/特征向量→SVD(Ch9)→LoRA", "target": "第9章", "status": "待验证"},
+  {"ref_id": "REF-022", "source": "第9章", "quote": "LoRA 微调大模型", "target": "大模型实践", "status": "参考"}
 ]
