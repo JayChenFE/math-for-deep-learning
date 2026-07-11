@@ -705,5 +705,16 @@
         "第19章(交叉熵驱动embedding学习)"
       ]
     }
+  ],
+  "6.6": [
+    {
+      "concept": "连续批处理(Continuous Batching)",
+      "definition": "变长序列拼接为(total_tokens,d)批量矩阵一次matmul; 块对角Attention Mask隔离用户; 计算量正比于有效token数",
+      "used_in": [
+        "第4.5节(状态迁移)",
+        "第5.5节(RAG)",
+        "第29章(Attention Mask)"
+      ]
+    }
   ]
 }

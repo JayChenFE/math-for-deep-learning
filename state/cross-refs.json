@@ -350,5 +350,13 @@
     "quote": "第4.5节的状态迁移+本节的点积检索+LLM的生成=一个完整的Agent认知循环",
     "target_chapter": "第4章",
     "status": "待验证"
+  },
+  {
+    "ref_id": "REF-045",
+    "source_chapter": "第6章",
+    "source_section": "6.6",
+    "quote": "第5.5节RAG检索+本节的连续批处理+第4.5节状态迁移=Agent服务完整推理栈",
+    "target_chapter": "第5章",
+    "status": "待验证"
   }
 ]
