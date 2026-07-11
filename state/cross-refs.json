@@ -142,5 +142,37 @@
     "quote": "第24章的各种优化器本质上都是在改进lr*gradient这个最基础的数乘操作",
     "target_chapter": "第24章",
     "status": "待验证"
+  },
+  {
+    "ref_id": "REF-019",
+    "source_chapter": "第5章",
+    "source_section": "5.4",
+    "quote": "第29章将把这个20行代码扩展为完整的Multi-Head Attention，第30章将用它训练一个真实的文本续写模型",
+    "target_chapter": "第29章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-020",
+    "source_chapter": "第5章",
+    "source_section": "5.4",
+    "quote": "第30章将用它训练一个真实的文本续写模型",
+    "target_chapter": "第30章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-021",
+    "source_chapter": "第5章",
+    "source_section": "5.2",
+    "quote": "第9章LoRA中的低秩分解也依赖于向量空间中的方向度量",
+    "target_chapter": "第9章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-022",
+    "source_chapter": "第5章",
+    "source_section": "5.4",
+    "quote": "第22章将修复上面代码中exp(scores)可能溢出的问题（稳定版softmax）",
+    "target_chapter": "第22章",
+    "status": "待验证"
   }
 ]

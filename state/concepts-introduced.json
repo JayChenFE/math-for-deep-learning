@@ -185,5 +185,38 @@
       "definition": "v(国王)-v(男人)+v(女人)≈v(女王)——向量加减可操作语义属性，高维空间方向编码抽象概念",
       "used_in": ["第5章(余弦相似度计算)", "第29章(Transformer Q·K语义匹配)"]
     }
+  ],
+  "5.1": [
+    {
+      "concept": "点积 / 内积 (Dot Product / Inner Product)",
+      "definition": "a·b = Σaᵢbᵢ，对应位置相乘再求和，结果是一个标量；是衡量两个向量相似度的基本运算",
+      "used_in": ["第6章(矩阵乘法每个元素=点积)", "第29章(Q@K^T注意力得分)"]
+    }
+  ],
+  "5.2": [
+    {
+      "concept": "点积的几何定义",
+      "definition": "a·b = |a||b|cosθ；代数定义Σaᵢbᵢ和几何定义|a||b|cosθ给出完全相同的结果——这是线性代数中代数与几何的交汇点",
+      "used_in": ["第29章(高维空间中无法画图，靠点积精确知道夹角)"]
+    },
+    {
+      "concept": "余弦相似度 (Cosine Similarity)",
+      "definition": "cos_sim = a·b/(|a||b|) = cosθ，值域[-1,1]；只度量方向一致性，不受向量长度影响",
+      "used_in": ["第5.3章(推荐系统)", "第9章(LoRA低秩分解)", "第29章(注意力权重)"]
+    }
+  ],
+  "5.3": [
+    {
+      "concept": "基于内容的推荐 (Content-Based Recommendation)",
+      "definition": "用户向量·物品向量 → 余弦相似度排序 → Top-K推荐；本质是向量空间中的最近邻搜索",
+      "used_in": ["第9章(矩阵分解推荐)", "第29章(注意力=对匹配度加权求和)"]
+    }
+  ],
+  "5.4": [
+    {
+      "concept": "缩放点积注意力 (Scaled Dot-Product Attention)",
+      "definition": "Attention(Q,K,V)=softmax(Q@K^T/√d_k)@V；Q@K^T中每个元素是query和key向量的点积；/√d_k防止点积过大导致softmax饱和",
+      "used_in": ["第22章(稳定版softmax)", "第29章(Multi-Head Attention完整实现)", "第30章(GPT-2推理)"]
+    }
   ]
 }
