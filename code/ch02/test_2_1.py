@@ -2,6 +2,10 @@ import numpy as np
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from pathlib import Path
+
+ASSETS = Path(__file__).resolve().parent.parent.parent / 'assets'
+ASSETS.mkdir(exist_ok=True)
 
 def f(x):
     return x ** 2
@@ -23,6 +27,6 @@ plt.plot([x1, x2], [f(x1), f(x2)], 'ro', markersize=6)
 plt.xlabel('x'); plt.ylabel('f(x)')
 plt.title('Secant Line')
 plt.legend(); plt.grid(alpha=0.3)
-plt.savefig('c:/projs/math-for-deep-learning/assets/ch02-secant.png', dpi=80)
+plt.savefig(ASSETS / 'ch02-secant.png', dpi=80)
 plt.close()
 print('2.1 OK')

@@ -3,6 +3,10 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+from pathlib import Path
+
+ASSETS = Path(__file__).resolve().parent.parent.parent / 'assets'
+ASSETS.mkdir(exist_ok=True)
 
 def f(x):
     return x ** 2
@@ -41,7 +45,7 @@ ani = animation.FuncAnimation(fig, update, frames=len(h_values),
 ax.legend(loc='upper left')
 
 # Save a few frames to verify
-ani.save('c:/projs/math-for-deep-learning/assets/ch02-secant-to-tangent.gif',
+ani.save(ASSETS / 'ch02-secant-to-tangent.gif',
          writer='pillow', fps=10, dpi=60)
 print(f'Animation saved: {len(h_values)} frames')
 print('2.3 OK')

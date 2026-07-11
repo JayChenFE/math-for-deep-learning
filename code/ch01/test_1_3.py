@@ -2,6 +2,10 @@ import numpy as np
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from pathlib import Path
+
+ASSETS = Path(__file__).resolve().parent.parent.parent / 'assets'
+ASSETS.mkdir(exist_ok=True)
 
 print('=== 1.3 绘图模板 ===')
 
@@ -18,7 +22,7 @@ def plot_function(f, x_range=(-3, 3), title="y = f(x)", num_points=200):
     plt.legend()
     plt.grid(alpha=0.3)
     safe_name = title.replace(' ', '_').replace('=', '').replace('²', '2')
-    out_path = f"c:/projs/math-for-deep-learning/assets/ch01-{safe_name}.png"
+    out_path = ASSETS / f"ch01-{safe_name}.png"
     plt.savefig(out_path, dpi=100)
     plt.close()
     print(f"Saved: {out_path}")
