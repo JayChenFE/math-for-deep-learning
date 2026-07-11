@@ -716,5 +716,17 @@
         "第29章(Attention Mask)"
       ]
     }
+  ],
+  "14.7": [
+    {
+      "concept": "Agent多轮对话显存管理",
+      "definition": "每轮结束state=state.detach()切断历史; 无detach->grad_fn链O(n)->显存线性增长; 有detach->每轮叶子节点->显存O(1)",
+      "used_in": [
+        "第4.5节(状态迁移)",
+        "第5.5节(RAG)",
+        "第6.6节(批处理)",
+        "第30章(GPT-2推理)"
+      ]
+    }
   ]
 }

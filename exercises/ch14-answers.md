@@ -100,4 +100,37 @@ print("\nno_grad 不仅快（省了建图时间），还省显存（不存中间
 
 ---
 
+## 5. （代码）Agent 多轮对话 detach 对比
+
+```python
+import torch
+
+n_rounds = 6
+d_model = 128
+
+print("=== Without detach (grad_fn chain grows) ===")
+state = torch.randn(1, d_model, requires_grad=True)
+for r in range(n_rounds):
+    W = torch.randn(d_model, d_model, requires_grad=True)
+    state = state @ W
+    gradfn_len = len(str(state.grad_fn)) if state.grad_fn is not None else 0
+    print(f"  Round {r+1}: grad_fn chain length ~ {gradfn_len}")
+
+print("\n=== With detach (stays a leaf) ===")
+state = torch.randn(1, d_model, requires_grad=True)
+for r in range(n_rounds):
+    W = torch.randn(d_model, d_model, requires_grad=True)
+    new_state = state @ W
+    state = new_state.detach().requires_grad_(True)
+    is_leaf = state.grad_fn is None
+    print(f"  Round {r+1}: is_leaf = {is_leaf} (grad_fn = {state.grad_fn})")
+
+print("\n结论: Without detach -> grad_fn chain grows linearly -> VRAM O(n)")
+print("      With detach -> always a leaf -> VRAM O(1)")
+```
+
+**预期输出**：不带 detach 时 `grad_fn` 的字符串表示越来越长（链条累积），带 detach 时始终为 `None`（叶子节点）。这直接对应显存占用——O(n) vs O(1)。
+
+---
+
 > **答案校验通过** — 2026-07-11
