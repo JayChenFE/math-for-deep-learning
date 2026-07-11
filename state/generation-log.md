@@ -104,3 +104,6 @@
 
 ## 第10章：导数
 - 2026-07-11 | test pass | 10 cells nb | 5 exercises validated
+
+## 第11章：偏导数
+- 2026-07-11 | test pass | 10 cells nb | 3 exercises

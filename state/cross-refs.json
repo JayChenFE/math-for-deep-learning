@@ -238,5 +238,13 @@
     "quote": "第25章Kaiming初始化专门为ReLU设计补偿信息减半",
     "target_chapter": "第25章",
     "status": "待验证"
+  },
+  {
+    "ref_id": "REF-031",
+    "source_chapter": "第11章",
+    "source_section": "11.3",
+    "quote": "第12章将把梯度垂直于等高线翻译成参数更新公式",
+    "target_chapter": "第12章",
+    "status": "待验证"
   }
 ]

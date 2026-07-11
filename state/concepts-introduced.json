@@ -494,5 +494,34 @@
         "第28章(反向传播)"
       ]
     }
+  ],
+  "11.1": [
+    {
+      "concept": "偏导数(Partial Derivative)",
+      "definition": "按住其他变量不动只对一个变量求导; 符号从d变为partial; 逐维度分解多元问题",
+      "used_in": [
+        "第12章(梯度=偏导数向量)",
+        "第14章(loss.backward())"
+      ]
+    }
+  ],
+  "11.2": [
+    {
+      "concept": "np.gradient",
+      "definition": "np.gradient(Z,y,x)->(dZ/dy,dZ/dx); 在二维网格上批量计算所有点的偏导; 注意返回顺序:axis=0在前",
+      "used_in": [
+        "第12章(梯度场可视化)"
+      ]
+    }
+  ],
+  "11.3": [
+    {
+      "concept": "梯度垂直于等高线",
+      "definition": "grad(f)指向最陡上升方向且垂直于等高线; -grad(f)指向最陡下降; 梯度=0在极值点; 梯度下降的几何基础",
+      "used_in": [
+        "第12章(梯度下降)",
+        "第24章(优化器)"
+      ]
+    }
   ]
 }
