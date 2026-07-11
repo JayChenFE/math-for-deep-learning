@@ -10,6 +10,23 @@
 
 不要将claude署名为共同作者
 
+## 章节生成规则
+
+**严格串行，禁止并行。** 每章必须完整生成所有产出物并提交后，才能开始下一章。
+
+单章完整流程：
+
+1. 撰写 `chapters/chNN-*.md`（正文）
+2. 撰写 `code/chNN/test_*.py` 并运行校验
+3. 撰写 `notebooks/chapter_NN.ipynb`
+4. 撰写 `exercises/chNN-answers.md` 并运行校验
+5. 更新 `state/concepts-introduced.json`
+6. 更新 `state/cross-refs.json`
+7. 更新 `state/generation-log.md`
+8. `git commit` + `git push`
+
+以上 8 步全部完成 → 确认提交成功 → 才能开始下一章。
+
 ## 一、符号约定体系（全书锁定，禁止漂移）
 
 ### 1.1 数学符号
@@ -360,7 +377,7 @@ c:\projs\math-for-deep-learning\
 3. 读取 `state/cross-refs.json`——确认本章是否有前序章节的引用需要兑现
 
 ### 生成
-
+ 
 4. 按"章节结构模板"生成正文（直觉→公式→代码）
 5. 正文中的"AI 连接"和"Transformer 定位"用 🔗 标注
 6. 章末钩子必须指向目录中明确存在的后续章节
