@@ -5,13 +5,33 @@
 
 ---
 
-### 22.1~22.2　标准 Softmax 与死亡陷阱
+### 22.1　标准 Softmax —— 从 logits 到概率
 
 Softmax 是深度学习中调用最频繁的函数之一——将任意实数向量变成概率分布（所有输出 > 0，和为 1）。它的公式出奇简洁：
 
 $$\text{softmax}(x_i) = \frac{e^{x_i}}{\sum_j e^{x_j}}$$
 
-但这个公式有一个致命陷阱：**`exp(1000)` 在 float32 下溢出为 Inf，Inf/Inf = NaN。** 输入 `[1000, 1001, 1002]` 看起来无害——只是三个大一点的数字——但 softmax 直接返回 `[NaN, NaN, NaN]`。整个训练链条从这一个 NaN 开始崩溃。
+📐 **定义　Softmax**：将 logits 向量 x 映射为概率分布 p，其中 pᵢ = exp(xᵢ) / Σⱼ exp(xⱼ)。输出满足 pᵢ > 0 且 Σpᵢ = 1。
+
+💻 **代码　标准 softmax 在安全输入下正常工作**
+
+```python
+import numpy as np
+
+def softmax_naive(x):
+    e_x = np.exp(x)
+    return e_x / e_x.sum()
+
+x_safe = np.array([2.0, 1.0, 0.1])
+print(f"安全输入 {x_safe}: {softmax_naive(x_safe).round(4)} ✓")
+print(f"和 = {softmax_naive(x_safe).sum():.4f} ✓")
+```
+
+---
+
+### 22.2　陷阱：`[1000, 1001, 1002]` 导致 NaN
+
+但标准 softmax 有一个致命陷阱：**`exp(1000)` 在 float32 下溢出为 Inf，Inf/Inf = NaN。** 输入 `[1000, 1001, 1002]` 看起来无害——只是三个大一点的数字——但 softmax 直接返回 `[NaN, NaN, NaN]`。整个训练链条从这一个 NaN 开始崩溃。
 
 这并非极端罕见。在大型 Transformer 训练中，logits 随层数累积放大，达到几百甚至上千完全正常。**每一次 softmax 都是一次潜在的 NaN 炸弹。**
 
@@ -21,13 +41,8 @@ $$\text{softmax}(x_i) = \frac{e^{x_i}}{\sum_j e^{x_j}}$$
 import numpy as np
 
 def softmax_naive(x):
-    """标准 softmax —— 随时可能爆炸"""
     e_x = np.exp(x)
     return e_x / e_x.sum()
-
-# 安全的输入
-x_safe = np.array([2.0, 1.0, 0.1])
-print(f"安全输入 {x_safe}: {softmax_naive(x_safe).round(4)} ✓")
 
 # 触发 NaN！
 x_danger = np.array([1000.0, 1001.0, 1002.0])
@@ -40,9 +55,11 @@ print(f"exp(1001) float32 = {np.exp(np.float32(1001.0))}")   # Inf
 print(f"Inf / (Inf+Inf+Inf) = NaN")
 ```
 
+> **关键洞察**：`exp(1000) ≈ 10⁴³⁴`，远超 float32 的最大值 ~3.4×10³⁸。模型稍微训练几轮，logits 就轻松突破这个阈值——**每一个未经保护的 softmax 都是一颗定时炸弹。**
+
 ---
 
-### 22.3　复活：减去最大值，数学上等价，数值上安全
+### 22.3　稳定版：`x − max(x)`，数学等价，数值安全
 
 **关键洞察**：softmax 对输入整体平移不改变输出——`softmax(x) = softmax(x − c)` 对任意常数 c 成立。因为分子分母的 `exp(c)` 可以约掉：
 
@@ -78,9 +95,51 @@ print(f"\n安全输入验证: 标准版={naive.round(4)}, 稳定版={stable.roun
 print(f"一致: {np.allclose(naive, stable)} ✓")
 ```
 
-> **关键洞察**：`x - max(x)` 是整个深度学习基础设施中最重要的一行代码之一。PyTorch 的 `F.softmax`、`F.cross_entropy`、`nn.MultiheadAttention` 内部全部使用了这个技巧。你在第 5.4 节手写注意力时用的 `scores / sqrt(d_k)` 之后再 softmax——如果 d_k=512 且 scores 偏大，减去 max 就是防止 NaN 的最后一道防线。
+> **关键洞察**：`x - max(x)` 是整个深度学习基础设施中最重要的一行代码之一。PyTorch 的 `F.softmax`、`F.cross_entropy`、`nn.MultiheadAttention` 内部全部使用了这个技巧。
 
-🔗 **AI 连接**：第 29 章 Transformer 的 `softmax(Q@Kᵀ/√d_k)` 和第 30 章的 Multi-Head Attention 都隐式依赖这个稳定技巧。PyTorch 的 `F.softmax(x, dim=-1)` 内部已实现稳定版——但理解原理让你在 debug 训练时不会对"明明公式没错，为什么返回 NaN"束手无策。
+🔗 **AI 连接**：第 29 章 Transformer 的 `softmax(Q@Kᵀ/√d_k)` 和第 30 章的 Multi-Head Attention 都隐式依赖这个稳定技巧。
+
+---
+
+### 22.4　代码对比：标准版 vs 稳定版 —— 五种输入量级实测
+
+纸上谈兵不够——本节亲手对比 naive 和 stable softmax 在五组不同量级输入上的表现，亲眼看到 naive 在哪一组开始崩溃。
+
+💻 **代码　五组输入，从安全到危险**
+
+```python
+import numpy as np
+
+def softmax_naive(x):
+    e = np.exp(x)
+    return e / e.sum()
+
+def softmax_stable(x):
+    x = np.array(x, dtype=np.float64)
+    x_shifted = x - np.max(x)
+    e_x = np.exp(x_shifted)
+    return e_x / e_x.sum()
+
+test_inputs = [
+    ([1, 2, 3], "安全"),
+    ([10, 20, 30], "安全"),
+    ([100, 200, 300], "边界"),
+    ([500, 501, 502], "危险"),
+    ([1000, 1001, 1002], "崩溃"),
+]
+
+for x_list, label in test_inputs:
+    x = np.float32(x_list)
+    try:
+        naive = softmax_naive(x)
+        status = "NaN!" if np.any(np.isnan(naive)) else f"OK (sum={naive.sum():.0f})"
+    except:
+        status = "CRASH"
+    stable = softmax_stable(x)
+    print(f"{label:4s} {str(x_list):<25} naive: {status:<15} stable: {stable.round(4)}")
+```
+
+> **关键洞察**：`[500, 501, 502]` 开始 naive 已不稳定（接近 float32 边界），`[1000, 1001, 1002]` 彻底崩溃。而 stable 版本无论输入多大，始终输出正确。**一行 `x - x.max()`，就是 NaN 和正常训练之间的唯一防线。**
 
 ---
 
