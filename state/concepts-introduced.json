@@ -891,5 +891,15 @@
         "第34章(LoRA微调)"
       ]
     }
+  ],
+  "29": [
+    {
+      "concept": "自注意力(Self-Attention)",
+      "definition": "QKV投影->缩放点积QK^T/sqrt(d_k)->softmax->加权V; 位置编码(Sinusoidal/Learned/RoPE); Causal Mask上三角-inf屏蔽未来",
+      "used_in": [
+        "第30章(多头)",
+        "第32章(KV Cache)"
+      ]
+    }
   ]
 }

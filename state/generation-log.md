@@ -158,3 +158,6 @@
 
 ## 第28章：两层神经网络
 - 2026-07-12 | test pass(acc=99%) | 8 cells nb | 4 exercises | Part 7完成
+
+## 第29章：注意力核心
+- 2026-07-12 | test pass | Part 8开始
