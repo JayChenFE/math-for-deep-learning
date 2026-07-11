@@ -599,5 +599,44 @@
         "第30章(GPT-2生成)"
       ]
     }
+  ],
+  "15.1-15.4": [
+    {
+      "concept": "随机变量(Random Variable)",
+      "definition": "值由概率决定的变量; 离散用PMF(概率质量和=1),连续用PDF(曲线下面积=概率)",
+      "used_in": [
+        "第16章(条件概率)",
+        "第29章(softmax输出)"
+      ]
+    },
+    {
+      "concept": "正态/均匀/伯努利分布",
+      "definition": "N(mu,sigma^2):68-95-99.7规则; Uniform(a,b):权重初始化; Bernoulli(p):二分类/Dropout",
+      "used_in": [
+        "第25章(初始化)",
+        "第21章(BatchNorm)",
+        "第18章(CLT)"
+      ]
+    }
+  ],
+  "15.5": [
+    {
+      "concept": "极大似然估计(MLE)",
+      "definition": "选择使观测数据出现概率最大的参数; 正态MLE=样本均值/方差; MLE等价于最小化交叉熵(第19章)",
+      "used_in": [
+        "第19章(交叉熵)",
+        "第26章(线性回归)",
+        "第30章(训练=MLE)"
+      ]
+    }
+  ],
+  "15.6": [
+    {
+      "concept": "采样策略",
+      "definition": "Greedy=argmax; Temperature=softmax(x/T)控制多样性; Top-k=前k候选; Top-p(核采样)=累积概率>=p的动态候选集,工业标准0.9",
+      "used_in": [
+        "第30章(GPT-2生成)"
+      ]
+    }
   ]
 }

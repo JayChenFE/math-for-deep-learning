@@ -286,5 +286,13 @@
     "quote": "第30章GPT-2推理全程在torch.no_grad()下运行",
     "target_chapter": "第30章",
     "status": "待验证"
+  },
+  {
+    "ref_id": "REF-037",
+    "source_chapter": "第15章",
+    "source_section": "15.6",
+    "quote": "第30章GPT-2生成用model.generate(temperature=0.7,top_p=0.9)",
+    "target_chapter": "第30章",
+    "status": "待验证"
   }
 ]

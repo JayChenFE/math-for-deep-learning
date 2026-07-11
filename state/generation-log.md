@@ -116,3 +116,6 @@
 
 ## 第14章：计算图与自动微分
 - 2026-07-11 | test pass | 8 cells nb | 4 exercises
+
+## 第15章：随机变量与分布
+- 2026-07-11 | test pass | 10 cells nb | 6 exercises
