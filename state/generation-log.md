@@ -146,3 +146,6 @@
 
 ## 第24章：优化算法
 - 2026-07-12 | test pass | 14 cells nb | 4 exercises
+
+## 第25章：权重初始化
+- 2026-07-12 | test pass | 9 cells nb | 3 exercises
