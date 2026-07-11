@@ -911,5 +911,15 @@
         "第32章(KV Cache)"
       ]
     }
+  ],
+  "31": [
+    {
+      "concept": "训练循环微观解剖",
+      "definition": "5步:forward->loss->backward->clip->step->zero_grad; zero_grad为何显式(梯度累加); train/eval切换; Gradient Checkpointing; retain_graph/create_graph",
+      "used_in": [
+        "第34章(微调)",
+        "第35章(Agent工具调用)"
+      ]
+    }
   ]
 }
