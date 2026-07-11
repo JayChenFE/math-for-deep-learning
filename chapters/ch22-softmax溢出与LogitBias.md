@@ -259,6 +259,10 @@ print(f"\n安全输入: 标准版和稳定版一致 ✓")
 print(f"这就是 F.cross_entropy 的引擎盖下——log_softmax + nll_loss")
 ```
 
+```
+
+🔗 **AI 连接**：`F.cross_entropy(logits, labels)` 的内部实现 = `F.log_softmax(logits) + F.nll_loss(...)` = LSE 技巧的工程化封装。当你调用 `.backward()` 时，PyTorch 使用的是 log_softmax 的梯度公式（而非先算 softmax 再取 log），避免中间溢出。第 31 章训练循环中每一行 `loss = F.cross_entropy(logits, labels)` 都在静默使用这个技巧。了解它的存在，有助于你在 debug NaN loss 时知道该往哪个方向排查。
+
 ---
 
 **✏️ 习题**

@@ -453,8 +453,7 @@
       "concept": "LoRA(Low-Rank Adaptation)",
       "definition": "DeltaW=B@A, B(dxr)和A(rxd), r<<d; 用2dr参数替代d^2; SVD低秩直觉的工程落地",
       "used_in": [
-        "LLM微调实践",
-        "HuggingFace PEFT"
+        "第34章(微调与LoRA)"
       ]
     }
   ],
@@ -661,7 +660,7 @@
       "concept": "朴素贝叶斯分类器(Naive Bayes)",
       "definition": "假设特征独立:P(words|class)=乘积P(w_i|class); 拉普拉斯平滑处理未见词; 20行代码90%+准确率",
       "used_in": [
-        "垃圾邮件过滤/情感分析",
+        "第27章(逻辑回归)",
         "第19章(交叉熵推导)"
       ]
     }
@@ -682,7 +681,7 @@
       "definition": "协方差矩阵特征分解->特征向量=数据主方向(PC); 取前k大特征值方向投影=降维; PCA=第8章特征分解的直接应用",
       "used_in": [
         "第9章(SVD实现PCA)",
-        "数据预处理/特征提取"
+        "第17章(PCA降维应用)"
       ]
     }
   ],
@@ -928,7 +927,7 @@
       "definition": "Prefill:一次全量计算K/V入缓存; Decode:只算新token的Q,复用历史K/V; O(N^2)->O(N); 内存带宽瓶颈; PagedAttention分页管理",
       "used_in": [
         "第33章(解码策略)",
-        "vLLM/TensorRT-LLM"
+        "第32章(KV Cache推理加速)"
       ]
     }
   ],

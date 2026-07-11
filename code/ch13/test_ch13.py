@@ -38,7 +38,7 @@ try:
     x_t = torch.tensor(0.8, requires_grad=True)
     h_t = torch.log(torch.cos(x_t**3))
     h_t.backward()
-    assert abs(x_t.grad.item() - chain_3(1.5)) < 1e-5
+    assert abs(x_t.grad.item() - chain_3(0.8)) < 1e-5
     print("Ch13 OK -- chain rule + PyTorch autograd verified")
 except ImportError:
     print("Ch13 OK -- chain rule verified (no PyTorch)")
