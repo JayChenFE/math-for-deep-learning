@@ -134,5 +134,13 @@
     "quote": "Eigen -> SVD (Ch9) -> LoRA",
     "target": "Ch9",
     "status": "pending"
+  },
+  {
+    "ref_id": "REF-022",
+    "source": "Ch9",
+    "section": "9.5",
+    "quote": "LoRA fine-tuning large models",
+    "target": "LLM practice",
+    "status": "reference"
   }
 ]

@@ -309,5 +309,34 @@
         "Ch17"
       ]
     }
+  ],
+  "9.1-9.2": [
+    {
+      "concept": "SVD",
+      "definition": "A=U*Sigma*V^T, any matrix decomposes into 3 parts",
+      "used_in": [
+        "Ch9.3-9.5",
+        "LoRA"
+      ]
+    }
+  ],
+  "9.3": [
+    {
+      "concept": "Low-Rank Approximation",
+      "definition": "Top-k singular values reconstruct optimal k-rank approx",
+      "used_in": [
+        "Ch9.5 LoRA",
+        "Recommender Systems"
+      ]
+    }
+  ],
+  "9.5": [
+    {
+      "concept": "LoRA",
+      "definition": "DeltaW=B@A (low-rank), train only 2dr params for LLM fine-tuning",
+      "used_in": [
+        "LLM practice"
+      ]
+    }
   ]
 }
