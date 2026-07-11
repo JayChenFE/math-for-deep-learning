@@ -729,5 +729,35 @@
         "第30章(GPT-2推理)"
       ]
     }
+  ],
+  "18.1": [
+    {
+      "concept": "大数定律(LLN)",
+      "definition": "样本均值随n增大以概率1收敛到期望; 数据越多估计越准; 所有统计估计的数学根基",
+      "used_in": [
+        "第24章(batch size不能太小)",
+        "第30章(训练loss收敛)"
+      ]
+    }
+  ],
+  "18.2": [
+    {
+      "concept": "中心极限定理(CLT)",
+      "definition": "任何分布i.i.d.抽样,样本均值分布->N(mu,sigma^2/n); 均值的方差是原始方差的1/n",
+      "used_in": [
+        "第18.3章(Mini-Batch SGD)",
+        "第24章(优化器假设梯度噪声正态)"
+      ]
+    }
+  ],
+  "18.3": [
+    {
+      "concept": "Mini-Batch SGD的CLT保证",
+      "definition": "grad_batch~N(grad_full,sigma^2/B); 无偏+方差可控+渐近正态; B=32~256甜点区间; Gradient Accumulation用小batch等效大batch",
+      "used_in": [
+        "第24章(Momentum/Adam)",
+        "第31章(GPT-2训练)"
+      ]
+    }
   ]
 }

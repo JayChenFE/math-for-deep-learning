@@ -366,5 +366,21 @@
     "quote": "工具调用低温度(0.1~0.3)保证JSON确定性;创意规划中温度(0.7~0.9)鼓励多样性;反思高温度采样多轨迹",
     "target_chapter": "第16章",
     "status": "待验证"
+  },
+  {
+    "ref_id": "REF-048",
+    "source_chapter": "第18章",
+    "source_section": "18.3",
+    "quote": "第24章优化器在设计时假设梯度是带噪声的真实梯度估计",
+    "target_chapter": "第24章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-049",
+    "source_chapter": "第18章",
+    "source_section": "18.3",
+    "quote": "第31章训练GPT-2时per_device_train_batch_size和gradient_accumulation_steps组合利用CLT",
+    "target_chapter": "第31章",
+    "status": "待验证"
   }
 ]

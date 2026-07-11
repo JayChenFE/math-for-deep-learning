@@ -125,3 +125,6 @@
 
 ## 第17章：期望、方差与协方差矩阵
 - 2026-07-11 | test pass | 8 cells nb | 4 exercises | PCA 4D->2D 95% variance retained
+
+## 第18章：大数定律与中心极限定理
+- 2026-07-12 | test pass | 10 cells nb | 3 exercises
