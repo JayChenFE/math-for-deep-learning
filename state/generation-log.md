@@ -110,3 +110,6 @@
 
 ## 第12章：梯度向量
 - 2026-07-11 | test pass | 10 cells nb | 3 exercises
+
+## 第13章：链式法则
+- 2026-07-11 | test pass | 8 cells nb | 3 exercises

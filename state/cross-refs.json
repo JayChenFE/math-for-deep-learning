@@ -262,5 +262,21 @@
     "quote": "第30章用这个模式训练一个真实的文本续写模型",
     "target_chapter": "第30章",
     "status": "待验证"
+  },
+  {
+    "ref_id": "REF-034",
+    "source_chapter": "第13章",
+    "source_section": "13.4",
+    "quote": "第14章的计算图会把这个接力可视化为图上节点的消息传递",
+    "target_chapter": "第14章",
+    "status": "待验证"
+  },
+  {
+    "ref_id": "REF-035",
+    "source_chapter": "第13章",
+    "source_section": "13.4",
+    "quote": "第28章会手写一个完整的两层网络反向传播",
+    "target_chapter": "第28章",
+    "status": "待验证"
   }
 ]
