@@ -82,4 +82,55 @@ print("  Conclusion: Laplace smoothing is essential for robustness")
 
 ---
 
+---
+
+## 4. （代码）Agent 置信度阈值 + 澄清流程
+
+```python
+import numpy as np
+
+np.random.seed(42)
+intents = ["订机票", "查天气", "设提醒", "放音乐"]
+n = len(intents)
+threshold = 0.7
+
+# 8 条 query: 偶数索引高置信,奇数索引低置信
+queries = [
+    "订明天去上海的机票",    # 高
+    "帮我订个什么来着",      # 低
+    "今天天气怎么样",        # 高
+    "那个票处理一下",        # 低
+    "播放周杰伦的歌",        # 高
+    "帮我把那个取消",        # 低
+    "下午三点提醒我开会",    # 高
+    "把之前的那个弄一下",    # 低
+]
+
+print(f"Confidence threshold: {threshold}\n")
+clarify_count = 0
+for i, query in enumerate(queries):
+    probs = np.random.dirichlet(np.ones(n) * 0.5)
+    if i % 2 == 0:  # high confidence
+        top = np.random.randint(0, n)
+        probs[top] += np.random.uniform(0.4, 0.6)
+    probs = probs / probs.sum()
+    max_idx = np.argmax(probs)
+    max_prob = probs[max_idx]
+
+    if max_prob >= threshold:
+        action = f"EXECUTE: {intents[max_idx]}"
+    else:
+        top2 = np.argsort(probs)[-2:][::-1]
+        action = f"CLARIFY: {intents[top2[0]]} or {intents[top2[1]]}?"
+        clarify_count += 1
+
+    print(f"  {query:<22s} max={max_prob:.2f} -> {action}")
+
+print(f"\nClarification triggered: {clarify_count}/{len(queries)} queries")
+```
+
+**预期输出**：约 4 条高置信直接执行，4 条低置信触发澄清（列出 top-2 候选意图）。比例取决于随机种子，大致各半。
+
+---
+
 > **答案校验通过** — 2026-07-11
