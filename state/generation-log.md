@@ -143,3 +143,6 @@
 
 ## 第23章：梯度爆炸与裁剪
 - 2026-07-12 | test pass | 8 cells nb | 2 exercises
+
+## Ch24-25:优化算法+权重初始化
+- 2026-07-12 | tests pass | Part 6完成
