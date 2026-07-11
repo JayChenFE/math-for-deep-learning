@@ -78,5 +78,13 @@
     "quote": "softmax(dim=-1) in Ch22/Ch29",
     "target": "Ch22",
     "status": "pending"
+  },
+  {
+    "ref_id": "REF-014",
+    "source": "Ch4",
+    "section": "4.4",
+    "quote": "Self-Attention (Ch29)",
+    "target": "Ch29",
+    "status": "pending"
   }
 ]

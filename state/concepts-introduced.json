@@ -194,5 +194,24 @@
         "Ch29"
       ]
     }
+  ],
+  "4.1-4.3": [
+    {
+      "concept": "Vector add/mul/sub",
+      "definition": "Parallelogram rule, scalar scaling, difference",
+      "used_in": [
+        "Ch5",
+        "Ch6"
+      ]
+    }
+  ],
+  "4.4": [
+    {
+      "concept": "Word Embedding Arithmetic",
+      "definition": "king-man+woman~queen",
+      "used_in": [
+        "Ch29"
+      ]
+    }
   ]
 }
