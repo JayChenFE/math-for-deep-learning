@@ -901,5 +901,15 @@
         "第32章(KV Cache)"
       ]
     }
+  ],
+  "30": [
+    {
+      "concept": "Multi-Head Attention+Transformer Block",
+      "definition": "形状芭蕾(B,L,D)->(B,H,L,Dh); FFN职责分离; Pre-Norm+残差; 50行class TransformerBlock完整实现",
+      "used_in": [
+        "第31章(训练循环)",
+        "第32章(KV Cache)"
+      ]
+    }
   ]
 }
