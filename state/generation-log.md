@@ -134,3 +134,6 @@
 
 ## 第20章：浮点数陷阱与精度
 - 2026-07-12 | test pass | 8 cells nb | 4 exercises
+
+## 第21章：归一化
+- 2026-07-12 | test pass | 8 cells nb | 4 exercises

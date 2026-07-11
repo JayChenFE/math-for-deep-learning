@@ -810,5 +810,16 @@
         "第31章(GPT-2训练)"
       ]
     }
+  ],
+  "21": [
+    {
+      "concept": "归一化(LayerNorm/RMSNorm)",
+      "definition": "LayerNorm:每token沿d_model归一化mu=0/std=1,Transformer标配; RMSNorm:只除RMS不减均值,快15%,LLaMA/Mistral/Qwen选择",
+      "used_in": [
+        "第29章(QKV)",
+        "第30章(Transformer Block)",
+        "第31章(训练)"
+      ]
+    }
   ]
 }
